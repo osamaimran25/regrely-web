@@ -132,9 +132,15 @@ svg {
   background-image: url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(232,240,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e\");
 }
 
-.nav-link.active,
-.dropdown-item.active {
+.nav-link.active {
   color: var(--primary) !important;
+  font-weight: 600;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff !important;
+  background-color: var(--primary) !important;
   font-weight: 600;
 }
 
@@ -142,6 +148,28 @@ svg {
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   background: var(--card);
+}
+
+.dropdown-item {
+  color: var(--text);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--text);
+  background: color-mix(in srgb, var(--primary) 16%, var(--card));
+  text-decoration: none;
+}
+
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+  color: color-mix(in srgb, var(--muted) 82%, var(--text));
+  opacity: 1;
+}
+
+[data-theme="dark"] .dropdown-item.disabled,
+[data-theme="dark"] .dropdown-item:disabled {
+  color: #7f97bc;
 }
 
 .card-surface {

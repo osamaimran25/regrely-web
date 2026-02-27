@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fbff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#061632">
   <title>RegRely Pricing | Starter, Growth, Enterprise</title>
   <meta name="description" content="Compare RegRely plans with monthly and annual billing, feature matrix, add-ons, and FAQs for privacy and risk teams.">
   <meta property="og:title" content="RegRely Pricing">
@@ -10,6 +12,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.regrely.com/pricing.html">
   <meta property="og:image" content="https://www.regrely.com/assets/img/og-placeholder.svg">
+  <meta property="og:site_name" content="RegRely">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RegRely Pricing | Starter, Growth, Enterprise">
+  <meta name="twitter:description" content="Compare RegRely plans with monthly and annual billing, feature matrix, add-ons, and FAQs for privacy and risk teams.">
+  <meta name="twitter:image" content="https://www.regrely.com/assets/img/og-placeholder.svg">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.regrely.com/pricing.html">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
   <link rel="shortcut icon" href="assets/img/favicon.svg">
@@ -25,8 +34,7 @@
     "name": "RegRely",
     "url": "https://www.regrely.com",
     "logo": "https://www.regrely.com/assets/img/logo-mark.svg",
-    "description": "Privacy and risk automation platform with tenant isolation, RBAC, and evidence packs.",
-    "sameAs": []
+    "description": "Privacy and risk automation platform with tenant isolation, RBAC, and evidence packs."
   }
   </script>
 </head>
@@ -61,6 +69,19 @@
                 <li><a class="dropdown-item" href="industry-healthtech.html" data-nav>Healthtech</a></li>
                 <li><a class="dropdown-item" href="industry-fintech.html" data-nav>Fintech</a></li>
                 <li><a class="dropdown-item" href="industry-ecommerce.html" data-nav>Ecommerce</a></li>
+                <li><a class="dropdown-item" href="industry-insurtech.html" data-nav>Insurtech</a></li>
+                <li><a class="dropdown-item" href="industry-edtech.html" data-nav>Edtech</a></li>
+                <li><a class="dropdown-item" href="industry-logistics.html" data-nav>Logistics</a></li>
+                <li><a class="dropdown-item" href="industry-hr.html" data-nav>HR</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="regulation-gdpr.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Regulations</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="regulation-gdpr.html" data-nav>GDPR</a></li>
+                <li><a class="dropdown-item disabled" href="regulation-gdpr.html" aria-disabled="true">CCPA (Coming Soon)</a></li>
+                <li><a class="dropdown-item disabled" href="regulation-gdpr.html" aria-disabled="true">HIPAA (Coming Soon)</a></li>
+                <li><a class="dropdown-item disabled" href="regulation-gdpr.html" aria-disabled="true">PDPL (Coming Soon)</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="pricing.html" data-nav>Pricing</a></li>
@@ -155,7 +176,7 @@
               <p class="text-muted">For regulated, multi-entity teams with advanced governance needs.</p>
               <ul class="plan-list mb-3">
                 <li>Everything in Growth</li>
-                <li>Advanced RBAC and SSO</li>
+                <li>Advanced RBAC and enterprise identity controls</li>
                 <li>Dedicated success manager</li>
                 <li>Custom legal/compliance mappings</li>
               </ul>
@@ -181,14 +202,18 @@
             </thead>
             <tbody>
               <tr><td>DSAR automation</td><td>Core</td><td>Advanced</td><td>Advanced + custom</td></tr>
-              <tr><td>ROPA management</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>ROPA + data inventory</td><td>Core</td><td>Advanced</td><td>Advanced + custom</td></tr>
+              <tr><td>Vendor + policy governance</td><td>-</td><td>Included</td><td>Included + custom mappings</td></tr>
               <tr><td>Compliance scan</td><td>-</td><td>Weekly</td><td>Continuous</td></tr>
               <tr><td>Risk register</td><td>-</td><td>Included</td><td>Included</td></tr>
-              <tr><td>Audit-ready exports</td><td>Basic</td><td>Enhanced</td><td>Evidence packs</td></tr>
+              <tr><td>Controls + framework operations</td><td>-</td><td>Included</td><td>Included + advanced governance</td></tr>
+              <tr><td>Audit-ready exports</td><td>Basic</td><td>Enhanced</td><td>Evidence packs + advanced artifacts</td></tr>
+              <tr><td>Admin audit center</td><td>-</td><td>Included</td><td>Included + custom retention support</td></tr>
               <tr><td>Support</td><td>Email</td><td>Priority</td><td>Dedicated + SLA</td></tr>
             </tbody>
           </table>
         </div>
+        <p class="small text-muted mt-2 mb-0">Feature availability is entitlement-based and finalized in your order form and implementation scope.</p>
       </div>
     </section>
 
@@ -281,8 +306,9 @@
           </div>
           <div class="col-6 col-lg-2">
             <h3 class="h6 footer-title">Legal</h3>
-            <a href="security.html#responsible-disclosure">Disclosure</a><br>
-            <a href="404.html">Status</a>
+            <a href="terms.html">Terms</a><br>
+            <a href="privacy.html">Privacy</a><br>
+            <a href="security.html#responsible-disclosure">Disclosure</a>
           </div>
         </div>
         <hr class="footer-divider">
