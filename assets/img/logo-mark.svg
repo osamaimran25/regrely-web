@@ -1,6 +1,22 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="4" y="4" width="56" height="56" rx="14" fill="#0F5BD8"/>
-  <path d="M18 38V18H31.5C37.2 18 41 21.2 41 26.4C41 31.7 37.2 35 31.5 35H24V46H18V38Z" fill="white"/>
-  <path d="M24 30H31C33.7 30 35 28.7 35 26.5C35 24.3 33.7 23 31 23H24V30Z" fill="#8DC0FF"/>
-  <circle cx="45.5" cy="42.5" r="6.5" fill="#8DC0FF"/>
+  <defs>
+    <linearGradient id="regrelyBg" x1="8" y1="6" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F5BD8"/>
+      <stop offset="1" stop-color="#0A8BC4"/>
+    </linearGradient>
+    <radialGradient id="regrelyGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49 15) rotate(137.8) scale(17.2)">
+      <stop stop-color="#9BE7FF"/>
+      <stop offset="1" stop-color="#9BE7FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="3" y="3" width="58" height="58" rx="16" fill="url(#regrelyBg)"/>
+  <rect x="3" y="3" width="58" height="58" rx="16" stroke="white" stroke-opacity="0.18" stroke-width="1.5"/>
+  <circle cx="49" cy="15" r="12" fill="url(#regrelyGlow)"/>
+
+  <path d="M32 13.5L46 20.2V31.2C46 40.8 38.8 46.8 32 49.5C25.2 46.8 18 40.8 18 31.2V20.2L32 13.5Z" fill="white" fill-opacity="0.15"/>
+
+  <path d="M24.6 22.6H33.4C38.1 22.6 41 25.1 41 29.2C41 32.1 39.5 34.4 36.7 35.4L41.2 41.4H35L31.5 36.1H29.8V41.4H24.6V22.6ZM29.8 27.1V31.6H32.7C34.4 31.6 35.6 30.8 35.6 29.3C35.6 27.8 34.4 27.1 32.7 27.1H29.8Z" fill="white"/>
+
+  <path d="M39.2 42.6L42.2 45.6L48.2 39.6" stroke="#A8FFD8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

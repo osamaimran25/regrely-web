@@ -80,6 +80,32 @@ svg {
   letter-spacing: 0.2px;
 }
 
+.brand-logo-nav {
+  width: 198px;
+  height: 44px;
+  max-width: 100%;
+  filter: drop-shadow(0 4px 10px rgba(15, 91, 216, 0.18));
+}
+
+.brand-logo-footer {
+  width: 176px;
+  height: 38px;
+  max-width: 100%;
+  filter: drop-shadow(0 3px 8px rgba(15, 91, 216, 0.12));
+}
+
+[data-theme="dark"] .brand-logo-nav,
+[data-theme="dark"] .brand-logo-footer {
+  filter: drop-shadow(0 5px 12px rgba(3, 10, 24, 0.45));
+}
+
+@media (max-width: 575.98px) {
+  .brand-logo-nav {
+    width: 164px;
+    height: 36px;
+  }
+}
+
 .navbar-brand .dot {
   color: var(--primary);
 }
