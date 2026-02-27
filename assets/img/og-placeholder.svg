@@ -1,13 +1,68 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RegRely social preview">
   <defs>
-    <linearGradient id="g1" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F5BD8"/>
-      <stop offset="1" stop-color="#0E8AA8"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071223"/>
+      <stop offset="0.55" stop-color="#0A1C3B"/>
+      <stop offset="1" stop-color="#0A2B56"/>
     </linearGradient>
+    <linearGradient id="panel" x1="740" y1="86" x2="1146" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12386D"/>
+      <stop offset="1" stop-color="#0F2850"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="108" y1="160" x2="640" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D72F3" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#18B8B0" stop-opacity="0.08"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
   </defs>
-  <rect width="1200" height="630" fill="#0B1220"/>
-  <rect x="40" y="40" width="1120" height="550" rx="24" fill="url(#g1)" fill-opacity="0.22"/>
-  <text x="90" y="220" fill="white" font-family="Segoe UI, sans-serif" font-size="64" font-weight="700">RegRely</text>
-  <text x="90" y="300" fill="#D8E7FF" font-family="Segoe UI, sans-serif" font-size="42">Privacy + Risk automation for modern businesses</text>
-  <text x="90" y="390" fill="#BBD4FF" font-family="Segoe UI, sans-serif" font-size="28">Tenant Isolation • RBAC • Audit Trails • Evidence Packs</text>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g opacity="0.14">
+    <path d="M0 90H1200" stroke="#9CC4FF"/>
+    <path d="M0 170H1200" stroke="#9CC4FF"/>
+    <path d="M0 250H1200" stroke="#9CC4FF"/>
+    <path d="M0 330H1200" stroke="#9CC4FF"/>
+    <path d="M0 410H1200" stroke="#9CC4FF"/>
+    <path d="M0 490H1200" stroke="#9CC4FF"/>
+    <path d="M0 570H1200" stroke="#9CC4FF"/>
+  </g>
+
+  <rect x="56" y="56" width="1088" height="518" rx="28" fill="#0B1B36" fill-opacity="0.74" stroke="#2D5A9A" stroke-opacity="0.42"/>
+  <rect x="76" y="76" width="1060" height="478" rx="22" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="720" y="86" width="406" height="458" rx="22" fill="url(#panel)" stroke="#4F81C9" stroke-opacity="0.55"/>
+    <rect x="744" y="112" width="358" height="64" rx="12" fill="#0A2143"/>
+    <rect x="766" y="134" width="132" height="20" rx="10" fill="#72AEFF"/>
+    <rect x="744" y="194" width="170" height="150" rx="14" fill="#0B2245"/>
+    <rect x="930" y="194" width="172" height="150" rx="14" fill="#0B2245"/>
+    <rect x="744" y="360" width="358" height="162" rx="14" fill="#0B2245"/>
+    <rect x="766" y="387" width="192" height="14" rx="7" fill="#89C0FF"/>
+    <rect x="766" y="413" width="160" height="14" rx="7" fill="#6EA7EA"/>
+    <rect x="766" y="439" width="226" height="14" rx="7" fill="#5B95DA"/>
+    <rect x="766" y="465" width="122" height="14" rx="7" fill="#4E84C8"/>
+    <rect x="952" y="218" width="124" height="18" rx="9" fill="#8EC2FF"/>
+    <rect x="952" y="248" width="96" height="16" rx="8" fill="#73ABF0"/>
+    <rect x="952" y="276" width="136" height="16" rx="8" fill="#5E94D8"/>
+    <circle cx="804" cy="248" r="24" fill="#58A4FF"/>
+    <circle cx="872" cy="276" r="20" fill="#55C2D2"/>
+  </g>
+
+  <text x="112" y="170" fill="#7BB4FF" font-family="Sora, Segoe UI, sans-serif" font-size="20" font-weight="600" letter-spacing="1.2">PRIVACY • RISK • COMPLIANCE</text>
+  <text x="112" y="250" fill="#FFFFFF" font-family="Sora, Segoe UI, sans-serif" font-size="76" font-weight="700">RegRely</text>
+  <text x="112" y="315" fill="#D8E8FF" font-family="Sora, Segoe UI, sans-serif" font-size="34" font-weight="500">Privacy + Risk Automation</text>
+  <text x="112" y="360" fill="#BDD8FF" font-family="Sora, Segoe UI, sans-serif" font-size="26">for modern businesses</text>
+
+  <rect x="112" y="404" width="170" height="42" rx="21" fill="#134487" stroke="#4A84D4"/>
+  <text x="145" y="432" fill="#EAF3FF" font-family="Sora, Segoe UI, sans-serif" font-size="18" font-weight="600">DSAR</text>
+  <rect x="296" y="404" width="178" height="42" rx="21" fill="#134487" stroke="#4A84D4"/>
+  <text x="327" y="432" fill="#EAF3FF" font-family="Sora, Segoe UI, sans-serif" font-size="18" font-weight="600">ROPA</text>
+  <rect x="488" y="404" width="188" height="42" rx="21" fill="#134487" stroke="#4A84D4"/>
+  <text x="522" y="432" fill="#EAF3FF" font-family="Sora, Segoe UI, sans-serif" font-size="18" font-weight="600">Risk Register</text>
+
+  <text x="112" y="500" fill="#B8D3FA" font-family="Sora, Segoe UI, sans-serif" font-size="20">Tenant Isolation • RBAC • Audit Trails • Evidence Packs</text>
+  <text x="112" y="536" fill="#8DB7ED" font-family="Sora, Segoe UI, sans-serif" font-size="18">www.regrely.com</text>
 </svg>

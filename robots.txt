@@ -3,4 +3,4 @@ Allow: /
 Disallow: /404.html
 Disallow: /case-study-template.html
 
-Sitemap: https://www.regrely.com/sitemap.xml
+Sitemap: https://regrely.com/sitemap.xml
