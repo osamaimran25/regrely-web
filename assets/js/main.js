@@ -76,7 +76,7 @@
 
   function buildMailto(subject, body) {
     return (
-      "mailto:sales@regrely.com?subject=" +
+      "mailto:info@regrely.com?subject=" +
       encodeURIComponent(subject) +
       "&body=" +
       encodeURIComponent(body)

@@ -1,29 +1,44 @@
-RegRely Static Marketing Website
+# RegRely Web (Next.js 14)
 
-Overview
-- Pure static site using HTML5, CSS3, Bootstrap 5 CDN, and minimal vanilla JS.
-- Works by opening `index.html` directly.
-- No build tools, frameworks, or backend required.
+Marketing site for RegRely built with Next.js 14 App Router, Tailwind CSS, and shadcn-style UI components.
 
-Deployment Notes
-1. Upload the entire project folder to your static host (Netlify, S3, Nginx, GitHub Pages, etc.).
-2. Keep all file paths and folder names unchanged so relative links resolve correctly.
-3. If hosting on a custom domain, update canonical and OpenGraph URLs in each HTML file from `https://www.regrely.com/...` to your domain.
-4. Ensure `sitemap.xml` and `robots.txt` are served from the web root.
+## Stack
 
-Contact Form Behavior
-- Current default: client-side validation + `mailto:` fallback.
-- Optional Formspree and Netlify Forms examples are included as comments in `contact.html`.
-- To enable hosted forms, uncomment and configure one option.
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Radix UI primitives (Tabs, Accordion)
+- lucide-react icons
 
-Core Features
-- Shared navbar, footer, demo modal, and cookie banner across pages.
-- Dark/light mode toggle with localStorage persistence.
-- Pricing monthly/annual toggle.
-- AI demo mock chat UI with structured response cards.
-- SEO metadata, canonical tags, Organization/Product/FAQ JSON-LD.
+## Routes
 
-Local Preview
-- Open `index.html` in a browser.
-- Recommended quick checks: nav links, dark mode toggle, pricing toggle, contact form validation, AI demo prompts.
-# regrely-web
+- `/` landing page with smooth-scroll sections
+- `/pricing` launch pricing and comparison
+- `/privacy` placeholder
+- `/terms` placeholder
+- `/contact` UI form with mailto fallback
+
+## Local Development
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Run dev server:
+   ```bash
+   npm run dev
+   ```
+3. Open `http://localhost:3000`.
+
+## Build
+
+```bash
+npm run build
+npm run start
+```
+
+## Notes
+
+- Navbar links to section IDs on `/` (`#features`, `#domains`, `#security`, `#reports`, `#early`).
+- Early Access modal is client-side only (no backend submission).
+- Contact form validates required fields and opens a mailto draft.

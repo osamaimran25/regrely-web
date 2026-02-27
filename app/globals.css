@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 33% 99%;
+  --foreground: 220 34% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 34% 14%;
+  --primary: 155 60% 38%;
+  --primary-foreground: 210 50% 98%;
+  --secondary: 210 28% 94%;
+  --secondary-foreground: 220 35% 18%;
+  --muted: 210 26% 95%;
+  --muted-foreground: 220 16% 42%;
+  --accent: 204 91% 95%;
+  --accent-foreground: 220 35% 20%;
+  --border: 215 24% 86%;
+  --ring: 155 60% 38%;
+}
+
+* {
+  @apply border-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background: hsl(var(--background));
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.site-bg {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 10% 2%, rgba(56, 189, 248, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 4%, rgba(16, 185, 129, 0.12), transparent 32%),
+    radial-gradient(circle at 50% 90%, rgba(15, 23, 42, 0.06), transparent 30%);
+}
+
+.muted-surface {
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.36), rgba(248, 250, 252, 0.6));
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+.accordion-content[data-state="open"] {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.accordion-content[data-state="closed"] {
+  animation: accordion-up 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
