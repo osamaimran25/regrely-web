@@ -62,8 +62,27 @@
       var annual = toggle.checked;
       document.querySelectorAll("[data-price-monthly]").forEach(function (el) {
         var price = annual ? el.getAttribute("data-price-annual") : el.getAttribute("data-price-monthly");
+        var oldPrice = annual
+          ? el.getAttribute("data-price-old-annual")
+          : el.getAttribute("data-price-old-monthly");
+        var discount = annual
+          ? el.getAttribute("data-discount-annual")
+          : el.getAttribute("data-discount-monthly");
         var unit = annual ? "/mo, billed yearly" : "/mo";
-        el.innerHTML = price + " <small>" + unit + "</small>";
+        var html = '<span class="price-current">' + price + "</span> <small>" + unit + "</small>";
+
+        if (oldPrice || discount) {
+          html += '<span class="price-meta">';
+          if (oldPrice) {
+            html += '<span class="price-old">' + oldPrice + "</span>";
+          }
+          if (discount) {
+            html += '<span class="price-save">' + discount + "</span>";
+          }
+          html += "</span>";
+        }
+
+        el.innerHTML = html;
       });
       if (savingsBadge) {
         savingsBadge.textContent = annual ? "Annual billing active (save 20%)" : "Monthly billing active";
