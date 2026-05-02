@@ -116,6 +116,14 @@ svg {
   --bs-navbar-active-color: var(--primary);
 }
 
+.navbar .d-flex.align-items-center.gap-2 {
+  flex-shrink: 0;
+}
+
+.navbar .btn-brand {
+  white-space: nowrap;
+}
+
 .navbar-toggler {
   border-color: var(--border);
 }
