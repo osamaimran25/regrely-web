@@ -69,7 +69,11 @@
           ? el.getAttribute("data-discount-annual")
           : el.getAttribute("data-discount-monthly");
         var unit = annual ? "/mo, billed yearly" : "/mo";
-        var html = '<span class="price-current">' + price + "</span> <small>" + unit + "</small>";
+        var showUnit = typeof price === "string" && price.trim().indexOf("$") === 0;
+        var html = '<span class="price-current">' + price + "</span>";
+        if (showUnit) {
+          html += " <small>" + unit + "</small>";
+        }
 
         if (oldPrice || discount) {
           html += '<span class="price-meta">';
