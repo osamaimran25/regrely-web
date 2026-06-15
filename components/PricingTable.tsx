@@ -11,136 +11,73 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 
 type Plan = {
-  name: "FREE" | "PRO" | "PRO+" | "ENTERPRISE";
-  monthly: number | null;
-  launchMonthly: number | null;
+  name: "Starter" | "Growth" | "Professional" | "Enterprise";
+  price: string;
   badge?: string;
+  cta: string;
   summary: string[];
   details: string[];
 };
 
 const plans: Plan[] = [
   {
-    name: "FREE",
-    monthly: 0,
-    launchMonthly: 0,
+    name: "Starter",
+    price: "$99/month",
+    cta: "Start Free Trial",
     summary: [
-      "2 users, 1 domain, 10 DSAR/month, 1 scan project, 1GB storage",
-      "Basic DSAR workflow, manual risk register, basic policy mgmt, basic data inventory, dashboard summary, XLSX export"
+      "5 users, 25 vendors, 1 framework, 100 DSARs per year",
+      "Compliance Scan, Findings, Controls & Evidence, Policy Management, Risk Register",
+      "Basic Vendor Management, Basic DSAR, Dashboard, Reports, Notifications, Audit Trail"
     ],
     details: [
-      "Limitations: no SLA automation, no vendor mgmt, no controls framework, no advanced reporting, no automation engine, community support"
+      "Does not include full RoPA, full Data Inventory, Breach Management, Business Risk Intelligence, or Consent Management."
     ]
   },
   {
-    name: "PRO",
-    monthly: 149,
-    launchMonthly: 99,
+    name: "Growth",
+    price: "$299/month",
     badge: "Most Popular",
+    cta: "Book Demo",
     summary: [
-      "7 users, 2 domains, 75 DSAR/month, 3 scan projects, 15GB storage",
-      "DSAR full lifecycle + SLA tracking, attachments & audit trail, validation checks",
-      "Governance: policy approvals, acknowledgments, risk workflow + evidence, vendor mgmt basic, ROPA, data inventory review",
-      "Scan: manual execution, findings, evidence uploads, risk-based classification",
-      "Reporting: XLSX + DOCX exports (DSAR SLA, risk register, vendor summary, standard audit export)"
+      "15 users, 150 vendors, 3 frameworks, 1,000 DSARs per year",
+      "Everything in Starter plus Full DSAR, Full RoPA, Full Data Inventory, and Breach Management",
+      "Scheduled Compliance Scans and Advanced Reporting"
     ],
     details: [
-      "Not included: controls automation, framework mapping/gap, remediation automation, escalation policies, PDF board reports, intelligence alerts"
+      "Built for teams actively running privacy operations and recurring compliance programs."
     ]
   },
   {
-    name: "PRO+",
-    monthly: 399,
-    launchMonthly: 299,
-    badge: "Automation & Audit Ready",
+    name: "Professional",
+    price: "$799/month",
+    cta: "Book Demo",
     summary: [
-      "25 users, 10 domains, 500 DSAR/month, 20 scan projects, 100GB storage",
-      "Includes everything in Pro +",
-      "Controls & Automation Engine: control library, framework mapping, coverage %, gap analysis, auto assignment, test cycles, evidence expiry, auto remediation, escalation, health scoring",
-      "Automation layer: daily SLA jobs, overdue DSAR alerts, control test reminders, remediation SLA alerts, vendor review reminders, intelligence alerts",
-      "Advanced reporting: board-ready PDF, executive summary, framework coverage, evidence register, control effectiveness, remediation SLA, findings closure, signed audit ledger export",
-      "Advanced governance: domain branding + consent config, domain compliance view, trends"
+      "30 users, 500 vendors, 6 frameworks",
+      "Everything in Growth plus Business Risk Intelligence, Executive Dashboard, and Board Reporting",
+      "Advanced Vendor Risk, Consent Management, API Access, and Webhooks"
     ],
-    details: []
+    details: [
+      "Best fit for compliance, privacy, and risk teams that need executive visibility and premium automation."
+    ]
   },
   {
-    name: "ENTERPRISE",
-    monthly: null,
-    launchMonthly: null,
+    name: "Enterprise",
+    price: "Custom",
+    cta: "Talk to Sales",
     summary: [
-      "Unlimited users/domains/DSAR/scans, dedicated storage, priority SLA",
-      "Multi-framework (GDPR, HIPAA, CCPA, UAE, ISO), SSO (SAML/Azure/Okta), API, integrations, custom taxonomy, white-labeled reports, dedicated AM, data residency, on-prem/private cloud, multi-entity hierarchy, advanced access policies, custom escalation matrix"
+      "Custom limits and enterprise contracting",
+      "Everything in Professional plus SSO, SCIM, Multi-Entity, Custom RBAC, Data Residency, and SLA commitments"
     ],
-    details: []
+    details: [
+      "Enterprise packaging is structured around procurement, security review, and complex governance requirements."
+    ]
   }
 ];
 
-function getPrice(plan: Plan, annual: boolean) {
-  if (plan.launchMonthly === null) {
-    return "Talk to Us";
-  }
-
-  if (plan.launchMonthly === 0) {
-    return "$0/month";
-  }
-
-  if (annual) {
-    return `$${plan.launchMonthly * 10}/year`;
-  }
-
-  return `$${plan.launchMonthly}/month`;
-}
-
-function getOriginalPrice(plan: Plan, annual: boolean) {
-  if (plan.monthly === null || plan.launchMonthly === null || plan.monthly === 0) {
-    return null;
-  }
-
-  if (annual) {
-    return `$${plan.monthly * 10}/year`;
-  }
-
-  return `$${plan.monthly}/month`;
-}
-
-function getDiscountCopy(plan: Plan) {
-  if (plan.name === "PRO") {
-    return "Save $50 (~34%)";
-  }
-  if (plan.name === "PRO+") {
-    return "Save $100 (~25%)";
-  }
-  return null;
-}
-
 export function PricingTable() {
-  return (
-    <Tabs defaultValue="monthly" className="space-y-8">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <TabsList>
-          <TabsTrigger value="monthly">Monthly</TabsTrigger>
-          <TabsTrigger value="annual">Annual</TabsTrigger>
-        </TabsList>
-        <Badge variant="success" className="normal-case tracking-normal">
-          Annual includes 2 months free
-        </Badge>
-      </div>
-
-      <TabsContent value="monthly">
-        <PricingCards annual={false} />
-      </TabsContent>
-      <TabsContent value="annual">
-        <PricingCards annual />
-      </TabsContent>
-    </Tabs>
-  );
-}
-
-function PricingCards({ annual }: { annual: boolean }) {
   return (
     <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
       {plans.map((plan) => (
@@ -148,7 +85,7 @@ function PricingCards({ annual }: { annual: boolean }) {
           key={plan.name}
           className={cn(
             "relative flex h-full flex-col border-border/80",
-            plan.name === "PRO" && "border-primary/40 shadow-glow"
+            plan.name === "Growth" && "border-primary/40 shadow-glow"
           )}
         >
           <CardHeader className="space-y-4">
@@ -156,24 +93,7 @@ function PricingCards({ annual }: { annual: boolean }) {
               <CardTitle className="text-base tracking-wide">{plan.name}</CardTitle>
               {plan.badge ? <Badge>{plan.badge}</Badge> : null}
             </div>
-
-            <div>
-              <p className="text-3xl font-bold text-foreground">{getPrice(plan, annual)}</p>
-              {getOriginalPrice(plan, annual) ? (
-                <p className="text-xs text-muted-foreground">
-                  <span className="line-through">{getOriginalPrice(plan, annual)}</span>
-                  <span className="ml-2 text-primary">Launch Offer</span>
-                </p>
-              ) : null}
-              {annual && plan.launchMonthly && plan.launchMonthly > 0 ? (
-                <p className="text-xs text-muted-foreground">
-                  Equivalent to ${plan.launchMonthly}/month billed annually
-                </p>
-              ) : null}
-              {getDiscountCopy(plan) ? (
-                <p className="text-xs font-medium text-primary">{getDiscountCopy(plan)}</p>
-              ) : null}
-            </div>
+            <p className="text-3xl font-bold text-foreground">{plan.price}</p>
           </CardHeader>
 
           <CardContent className="flex flex-1 flex-col gap-5">
@@ -206,10 +126,9 @@ function PricingCards({ annual }: { annual: boolean }) {
               </AccordionItem>
             </Accordion>
 
-            <Button className="mt-auto" variant={plan.name === "FREE" ? "secondary" : "default"}>
-              {plan.name === "ENTERPRISE" ? "Talk to Sales" : "Choose Plan"}
+            <Button className="mt-auto" variant={plan.name === "Starter" ? "secondary" : "default"}>
+              {plan.cta}
             </Button>
-
           </CardContent>
         </Card>
       ))}

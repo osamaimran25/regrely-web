@@ -49,7 +49,7 @@ const featureCards = [
   "Risk register + evidence workflows",
   "Compliance scans + findings",
   "Reporting exports (XLSX/DOCX/PDF in higher tiers)",
-  "Audit ledger / tamper-evident exports (Pro+)"
+  "Audit ledger / tamper-evident exports (Professional)"
 ];
 
 const reportCards = [
