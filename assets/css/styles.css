@@ -751,7 +751,11 @@ svg {
 
 /* ── Blog: answer block and long-form post body ──────────────────────────── */
 
+/* .card-surface carries no padding of its own — every other use pairs it with
+   .feature-card. The answer block needs its own, or the text sits flush
+   against the accent border. */
 .answer-block {
+  padding: 1.4rem 1.65rem;
   border-left: 3px solid var(--primary);
 }
 
@@ -759,6 +763,18 @@ svg {
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--text);
+}
+
+/* Sits directly under the page hero, which already gives 3rem below it. */
+.answer-section {
+  padding-top: 0;
+  padding-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .answer-block {
+    padding: 1.15rem 1.25rem;
+  }
 }
 
 .post-body {
