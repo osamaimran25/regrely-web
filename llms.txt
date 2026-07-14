@@ -11,9 +11,14 @@ operations rather than enterprise-weight tooling. It is a product of
 
 ## Regulation coverage
 
-GDPR is supported today. Support for CCPA, HIPAA, and the UAE PDPL is planned. The
+GDPR is supported today. Support for CCPA, HIPAA, and the UAE PDPL is in development. The
 underlying workflows — records of processing, data subject requests, consent, risk, and
 evidence — are common across all four.
+
+- [GDPR](https://regrely.com/regulation-gdpr.html): Supported today. Lawful basis, Article 30 records, data subject rights within one month, 72-hour breach notification, DPIAs.
+- [CCPA / CPRA](https://regrely.com/regulation-ccpa.html): In development. California disclosure duties, 45-day consumer requests, and the right to opt out of sale or sharing.
+- [HIPAA](https://regrely.com/regulation-hipaa.html): In development. Business associate agreements, the Privacy and Security Rules, and 60-day breach notification.
+- [UAE PDPL](https://regrely.com/regulation-pdpl.html): In development. Federal UAE data protection — lawful bases, data subject rights, and cross-border transfers.
 
 ## Modules
 
