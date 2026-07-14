@@ -1,0 +1,58 @@
+# RegRely
+
+> RegRely is a privacy and compliance automation platform that helps growing companies
+> run their GDPR obligations without a dedicated compliance team — DSAR automation,
+> records of processing (ROPA), consent tracking, compliance scanning, risk registers,
+> and audit-ready evidence packs.
+
+RegRely is built for startups and growing businesses that need practical compliance
+operations rather than enterprise-weight tooling. It is a product of
+[Flowmoat](https://flowmoat.com/), an enterprise AI engineering company.
+
+## Regulation coverage
+
+GDPR is supported today. Support for CCPA, HIPAA, and the UAE PDPL is planned. The
+underlying workflows — records of processing, data subject requests, consent, risk, and
+evidence — are common across all four.
+
+## Modules
+
+- [DSAR Automation](https://regrely.com/product-dsar.html): Data subject request intake, identity verification, fulfilment workflows, approvals, and evidence-ready responses within statutory deadlines.
+- [ROPA Mapping](https://regrely.com/product-ropa.html): A live record of processing activities with purpose, legal basis, recipients, retention, and control mapping.
+- [Consent Tracking](https://regrely.com/product-consent.html): Consent status, policy versions, and revocation workflows across regions and products.
+- [Compliance Scan](https://regrely.com/product-compliance-scan.html): Control scanning, findings management, and remediation tracking with evidence traceability.
+- [Risk Register](https://regrely.com/product-risk-register.html): Risk scoring, mitigation ownership, and residual risk acceptance.
+- [Reports](https://regrely.com/product-reports.html): Executive dashboards and audit-ready exports.
+
+## Industries
+
+RegRely publishes privacy-operations guidance for
+[SaaS](https://regrely.com/industry-saas.html),
+[healthtech](https://regrely.com/industry-healthtech.html),
+[fintech](https://regrely.com/industry-fintech.html),
+[ecommerce](https://regrely.com/industry-ecommerce.html),
+[insurtech](https://regrely.com/industry-insurtech.html),
+[edtech](https://regrely.com/industry-edtech.html),
+[logistics](https://regrely.com/industry-logistics.html), and
+[HR](https://regrely.com/industry-hr.html).
+
+## Who RegRely is for
+
+Startups and growing companies — typically without a dedicated privacy team — that hold
+customer personal data and face GDPR obligations, enterprise security reviews, or an
+upcoming audit.
+
+## Pricing
+
+Starter $99/month, Growth $299/month, Professional $799/month, Enterprise custom.
+See [pricing](https://regrely.com/pricing.html).
+
+## Security
+
+Tenant isolation, role-based access control, encryption in transit and at rest, and
+immutable audit logging. See [security](https://regrely.com/security.html).
+
+## Contact
+
+- [Contact RegRely](https://regrely.com/contact.html) — info@regrely.com
+- [Start a free trial](https://beta.regrely.com/)

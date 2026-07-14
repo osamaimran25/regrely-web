@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://regrely.com/index.html</loc></url>
+  <url><loc>https://regrely.com/</loc></url>
   <url><loc>https://regrely.com/pricing.html</loc></url>
   <url><loc>https://regrely.com/product.html</loc></url>
   <url><loc>https://regrely.com/product-dsar.html</loc></url>
@@ -28,4 +28,46 @@
   <url><loc>https://regrely.com/about.html</loc></url>
   <url><loc>https://regrely.com/contact.html</loc></url>
   <url><loc>https://regrely.com/ai-demo.html</loc></url>
+  <url>
+    <loc>https://regrely.com/blog/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://regrely.com/blog/how-to-respond-to-a-dsar.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://regrely.com/blog/what-is-a-ropa.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://regrely.com/blog/gdpr-vs-ccpa.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://regrely.com/blog/do-we-need-a-dpo.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://regrely.com/blog/when-is-a-dpia-required.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://regrely.com/blog/gdpr-compliance-checklist-for-saas.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

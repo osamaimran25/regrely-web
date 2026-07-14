@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fbff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#061632">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="shortcut icon" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>What Is a ROPA? GDPR Article 30 Explained | RegRely</title>
+  <meta name="description" content="What a record of processing activities is, who GDPR Article 30 actually requires to keep one, what it must contain, and why spreadsheets fail at it.">
+  <link rel="canonical" href="https://regrely.com/blog/what-is-a-ropa.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What is a ROPA, and does your company need one?">
+  <meta property="og:description" content="What a record of processing activities is, who GDPR Article 30 actually requires to keep one, what it must contain, and why spreadsheets fail at it.">
+  <meta property="og:url" content="https://regrely.com/blog/what-is-a-ropa.html">
+  <meta property="og:image" content="https://regrely.com/assets/img/og-default.jpg">
+  <meta property="og:site_name" content="RegRely">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What is a ROPA, and does your company need one?">
+  <meta name="twitter:description" content="What a record of processing activities is, who GDPR Article 30 actually requires to keep one, what it must contain, and why spreadsheets fail at it.">
+  <meta name="twitter:image" content="https://regrely.com/assets/img/og-default.jpg">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://regrely.com/blog/what-is-a-ropa.html#article", "headline": "What is a ROPA, and does your company need one?", "description": "What a record of processing activities is, who GDPR Article 30 actually requires to keep one, what it must contain, and why spreadsheets fail at it.", "url": "https://regrely.com/blog/what-is-a-ropa.html", "datePublished": "2026-07-14", "dateModified": "2026-07-14", "author": {"@id": "https://regrely.com/#organization"}, "publisher": {"@id": "https://regrely.com/#organization"}, "image": "https://regrely.com/assets/img/og-default.jpg", "inLanguage": "en", "isPartOf": {"@id": "https://regrely.com/blog/#blog"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is a ROPA the same as a data inventory?", "acceptedAnswer": {"@type": "Answer", "text": "They overlap but are not identical. A data inventory catalogues what data you hold and where. A ROPA documents the processing activities — the purpose, legal basis, recipients, transfers, and retention. A good data inventory is the raw material for the ROPA, not a substitute for it."}}, {"@type": "Question", "name": "Do processors need a ROPA?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but a shorter one. Under Article 30(2) a processor records the categories of processing carried out on behalf of each controller, any third-country transfers, and a description of security measures. It does not need to record purposes or legal bases, because those belong to the controller."}}, {"@type": "Question", "name": "How often should a ROPA be updated?", "acceptedAnswer": {"@type": "Answer", "text": "Whenever processing changes — a new system, a new vendor, a new data type, a new market — not on an annual schedule. Annual reviews catch what the year forgot; they do not prevent the gap in between, which is when a DSAR or a breach will find it."}}, {"@type": "Question", "name": "Does a regulator actually ask to see the ROPA?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is typically one of the first documents requested in an investigation, because it demonstrates whether an organisation understands its own processing. An absent or obviously stale ROPA shapes the regulator's view of everything else they then look at."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://regrely.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://regrely.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "What is a ROPA, and does your company need one?", "item": "https://regrely.com/blog/what-is-a-ropa.html"}]}
+  </script>
+</head>
+<body>
+
+  <a class="visually-hidden-focusable" href="#main-content">Skip to content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg glass-nav fixed-top" aria-label="Main navigation">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" data-nav>
+          <img src="../assets/img/logo-regrely.svg" alt="RegRely" class="brand-logo-nav" width="198" height="44">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Product</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../product-dsar.html" data-nav>DSAR Automation</a></li>
+                <li><a class="dropdown-item" href="../product-ropa.html" data-nav>ROPA Mapping</a></li>
+                <li><a class="dropdown-item" href="../product-consent.html" data-nav>Consent Tracking</a></li>
+                <li><a class="dropdown-item" href="../product-compliance-scan.html" data-nav>Compliance Scan</a></li>
+                <li><a class="dropdown-item" href="../product-reports.html" data-nav>Reports</a></li>
+                <li><a class="dropdown-item" href="../product-risk-register.html" data-nav>Risk Register</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../industries.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Industries</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../industry-saas.html" data-nav>SaaS</a></li>
+                <li><a class="dropdown-item" href="../industry-healthtech.html" data-nav>Healthtech</a></li>
+                <li><a class="dropdown-item" href="../industry-fintech.html" data-nav>Fintech</a></li>
+                <li><a class="dropdown-item" href="../industry-ecommerce.html" data-nav>Ecommerce</a></li>
+                <li><a class="dropdown-item" href="../industry-insurtech.html" data-nav>Insurtech</a></li>
+                <li><a class="dropdown-item" href="../industry-edtech.html" data-nav>Edtech</a></li>
+                <li><a class="dropdown-item" href="../industry-logistics.html" data-nav>Logistics</a></li>
+                <li><a class="dropdown-item" href="../industry-hr.html" data-nav>HR</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../regulation-gdpr.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Regulations</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>GDPR</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>CCPA</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>HIPAA</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>UAE PDPL</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pricing.html" data-nav>Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="../security.html" data-nav>Security</a></li>
+            <li class="nav-item"><a class="nav-link" href="../case-studies.html" data-nav>Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html" data-nav>Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html" data-nav>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../contact.html" data-nav>Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark Mode</button>
+            <a class="btn btn-brand" href="https://beta.regrely.com/" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="small mb-3">
+          <a href="../index.html">Home</a> <span class="text-muted">/</span>
+          <a href="index.html">Blog</a> <span class="text-muted">/</span>
+          <span class="text-muted">ROPA Mapping</span>
+        </nav>
+        <h1>What is a ROPA, and does your company need one?</h1>
+        <p class="text-muted mb-0">8 min read</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface answer-block mb-4">
+          <p class="mb-0">A ROPA — record of processing activities — is a documented inventory of how an organisation processes personal data: what data, for what purpose, on what legal basis, who it is shared with, where it is stored, and how long it is kept. GDPR Article 30 makes it mandatory for most organisations that handle customer data.</p>
+        </div>
+        <article class="post-body">
+<p>The record of processing activities is the least glamorous document in privacy, and the one everything else depends on.</p>
+<p>You cannot answer a <a href="../product-dsar.html">data subject access request</a> without knowing which systems hold that person's data. You cannot set a retention schedule without knowing what you hold. You cannot assess a risk you have not inventoried. Every privacy programme that stalls, stalls here.</p>
+<h2>What Article 30 actually requires</h2>
+<p>A ROPA is a written record of each processing activity. For a controller it must include:</p>
+<ul>
+<li>the name and contact details of the controller (and DPO, where one exists)</li>
+<li>the <strong>purposes</strong> of the processing</li>
+<li>a description of the <strong>categories of data subject</strong> and <strong>categories of personal data</strong></li>
+<li>the <strong>categories of recipient</strong> the data is disclosed to, including recipients in third countries</li>
+<li><strong>transfers to third countries</strong>, and the safeguards relied on</li>
+<li>the <strong>retention period</strong>, where possible</li>
+<li>a general description of the <strong>technical and organisational security measures</strong></li>
+</ul>
+<p>In practice most organisations also record the <strong>legal basis</strong> for each activity — which Article 30 does not strictly demand, but which you must be able to demonstrate under Article 5, and which is the first thing a regulator asks about.</p>
+<h2>The 250-employee threshold is not the exemption people think it is</h2>
+<p>Article 30(5) says the obligation does not apply to organisations with fewer than 250 employees — <strong>unless</strong> the processing:</p>
+<ul>
+<li>is likely to result in a <strong>risk to the rights and freedoms</strong> of data subjects, or</li>
+<li>is <strong>not occasional</strong>, or</li>
+<li>includes <strong>special-category data</strong> or criminal conviction data</li>
+</ul>
+<p>Read that second condition again. <em>Not occasional.</em></p>
+<p>If you process customer data as a routine part of running your business — which is to say, if you have customers — your processing is not occasional. The exemption is designed for the corner shop that keeps a supplier list, not for a 40-person SaaS company with a CRM.</p>
+<p>Most companies that believe they are exempt are not.</p>
+<h2>Why spreadsheets fail</h2>
+<p>Almost every ROPA starts life as a spreadsheet, and almost every one of them is wrong within six months.</p>
+<p>Not because spreadsheets are bad, but because a ROPA is a <strong>living record of reality</strong>, and a spreadsheet is a snapshot of one afternoon. The moment someone buys a new analytics tool, adds a pixel through the tag manager, signs a new processor, or launches a feature that collects a new field, the spreadsheet is out of date — and nobody updates it, because updating it is nobody's job at the moment the change happens.</p>
+<p>The gap widens quietly until the day it matters: an audit, a breach, a security review, or a DSAR you cannot fulfil because the data is in a system that is not on the list.</p>
+<p>A stale ROPA is worse than no ROPA. It gives you false confidence, and it demonstrates to a regulator that you had a process and did not follow it.</p>
+<h2>What good looks like</h2>
+<p>A ROPA that survives contact with reality has three properties.</p>
+<p><strong>It is tied to the systems, not just to a document.</strong> When a new processor is added, the record is updated as part of that change — not in an annual review six months later.</p>
+<p><strong>Every activity has a named owner.</strong> Not "the compliance team." The person in the business who actually understands why that processing happens and can tell you when it stops.</p>
+<p><strong>It maps to controls and to risk.</strong> A record that says <em>what</em> you do without linking to <em>how it is protected</em> and <em>what could go wrong</em> is an inventory, not a compliance artefact.</p>
+<h2>Where to start</h2>
+<p>Start with the systems, not the processes. Ask what tools the company pays for, what data goes into each, and who owns them. Finance's vendor list is usually a more honest inventory of your data flows than anything the compliance team has.</p>
+<p>Then, for each one: what personal data, whose, why, on what basis, shared with whom, kept how long.</p>
+<p>It is tedious the first time. It is the foundation for everything after it — which is why <a href="../product-ropa.html">keeping the ROPA live</a>, rather than rebuilding it annually, is the highest-leverage thing a small privacy programme can do.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+      <h2 class="mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="whatisaropaFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#whatisaropaFaq0" aria-expanded="true">Is a ROPA the same as a data inventory?</button></h3>
+          <div id="whatisaropaFaq0" class="accordion-collapse collapse show" data-bs-parent="#whatisaropaFaq"><div class="accordion-body">They overlap but are not identical. A data inventory catalogues what data you hold and where. A ROPA documents the processing activities — the purpose, legal basis, recipients, transfers, and retention. A good data inventory is the raw material for the ROPA, not a substitute for it.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whatisaropaFaq1" aria-expanded="false">Do processors need a ROPA?</button></h3>
+          <div id="whatisaropaFaq1" class="accordion-collapse collapse" data-bs-parent="#whatisaropaFaq"><div class="accordion-body">Yes, but a shorter one. Under Article 30(2) a processor records the categories of processing carried out on behalf of each controller, any third-country transfers, and a description of security measures. It does not need to record purposes or legal bases, because those belong to the controller.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whatisaropaFaq2" aria-expanded="false">How often should a ROPA be updated?</button></h3>
+          <div id="whatisaropaFaq2" class="accordion-collapse collapse" data-bs-parent="#whatisaropaFaq"><div class="accordion-body">Whenever processing changes — a new system, a new vendor, a new data type, a new market — not on an annual schedule. Annual reviews catch what the year forgot; they do not prevent the gap in between, which is when a DSAR or a breach will find it.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whatisaropaFaq3" aria-expanded="false">Does a regulator actually ask to see the ROPA?</button></h3>
+          <div id="whatisaropaFaq3" class="accordion-collapse collapse" data-bs-parent="#whatisaropaFaq"><div class="accordion-body">Yes. It is typically one of the first documents requested in an investigation, because it demonstrates whether an organisation understands its own processing. An absent or obviously stale ROPA shapes the regulator&#x27;s view of everything else they then look at.</div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2>ROPA Mapping</h2>
+          <p class="text-muted">See how RegRely turns this into a repeatable, evidenced workflow.</p>
+          <a class="btn btn-brand" href="../product-ropa.html">Explore ROPA Mapping</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="h4 mb-3">Keep reading</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="how-to-respond-to-a-dsar.html">
+              <h3 class="h6 mb-2">How to respond to a DSAR: a step-by-step process</h3>
+              <p class="small text-muted mb-0">The deadline starts the moment it arrives, not the moment you notice it. Here is the process, step by step.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="gdpr-vs-ccpa.html">
+              <h3 class="h6 mb-2">GDPR vs CCPA: the differences that actually change what you build</h3>
+              <p class="small text-muted mb-0">GDPR is opt-in by design. CCPA is opt-out. Almost every operational difference follows from that one line.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-shell">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="navbar-brand d-inline-flex align-items-center gap-2" href="../index.html">
+              <img src="../assets/img/logo-regrely.svg" alt="RegRely" class="brand-logo-footer" width="176" height="38">
+            </a>
+            <p class="footer-copy mt-3 mb-0">Privacy and risk operations platform built for audit readiness, faster response cycles, and clean tenant separation.</p>
+            <div class="footer-contact-card mt-3">
+              <p class="mb-1">Talk to the RegRely team</p>
+              <a class="footer-email" href="mailto:info@regrely.com">info@regrely.com</a>
+              <a class="footer-social-link" href="https://www.linkedin.com/company/regrely" target="_blank" rel="noopener noreferrer" aria-label="RegRely on LinkedIn">
+                <img src="../assets/img/linkedin.svg" alt="LinkedIn" width="20" height="20">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Product</h3>
+            <a href="../product.html">Overview</a><br>
+            <a href="../product-dsar.html">DSAR</a><br>
+            <a href="../product-risk-register.html">Risk Register</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Company</h3>
+            <a href="../about.html">About</a><br>
+            <a href="../security.html">Security</a><br>
+            <a href="../contact.html">Contact</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Resources</h3>
+            <a href="../pricing.html">Pricing</a><br>
+            <a href="../case-studies.html">Case Studies</a><br>
+            <a href="../ai-demo.html">AI Demo</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Legal</h3>
+            <a href="../terms.html">Terms</a><br>
+            <a href="../privacy.html">Privacy</a><br>
+            <a href="../security.html#responsible-disclosure">Disclosure</a>
+          </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <p class="text-muted small mb-0">© 2026 RegRely. All rights reserved.</p>
+          <div class="d-flex flex-wrap gap-3 small">
+            <a href="../contact.html">Talk to Sales</a>
+            <a href="../security.html">Trust Center</a>
+            <a href="../pricing.html">Plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="demoModalLabel">Request a RegRely Demo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="demoForm" novalidate>
+            <div class="mb-3">
+              <label for="demoName" class="form-label">Name</label>
+              <input id="demoName" class="form-control" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoEmail" class="form-label">Work email</label>
+              <input id="demoEmail" class="form-control" type="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid work email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoCompany" class="form-label">Company</label>
+              <input id="demoCompany" class="form-control" name="company" required>
+              <div class="invalid-feedback">Please enter your company.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoSize" class="form-label">Team size</label>
+              <select id="demoSize" class="form-select" name="team_size" required>
+                <option value="">Choose one...</option>
+                <option>1-50</option>
+                <option>51-200</option>
+                <option>201-1000</option>
+                <option>1000+</option>
+              </select>
+              <div class="invalid-feedback">Please select your team size.</div>
+            </div>
+            <p id="demoFormSuccess" class="alert alert-success d-none" role="status"></p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-brand">Submit Request</button>
+              <button type="button" class="btn btn-ghost" id="copyDemoTemplate">Copy Email Template</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookieBanner" class="cookie-banner card-surface" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+      <p class="mb-0 small text-muted">RegRely uses minimal cookies for theme and experience preferences.</p>
+      <button id="cookieAccept" class="btn btn-sm btn-brand" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+
+
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="demoModalLabel">Request a RegRely Demo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="demoForm" novalidate>
+            <div class="mb-3">
+              <label for="demoName" class="form-label">Name</label>
+              <input id="demoName" class="form-control" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoEmail" class="form-label">Work email</label>
+              <input id="demoEmail" class="form-control" type="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid work email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoCompany" class="form-label">Company</label>
+              <input id="demoCompany" class="form-control" name="company" required>
+              <div class="invalid-feedback">Please enter your company.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoSize" class="form-label">Team size</label>
+              <select id="demoSize" class="form-select" name="team_size" required>
+                <option value="">Choose one...</option>
+                <option>1-50</option>
+                <option>51-200</option>
+                <option>201-1000</option>
+                <option>1000+</option>
+              </select>
+              <div class="invalid-feedback">Please select your team size.</div>
+            </div>
+            <p id="demoFormSuccess" class="alert alert-success d-none" role="status"></p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-brand">Submit Request</button>
+              <button type="button" class="btn btn-ghost" id="copyDemoTemplate">Copy Email Template</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookieBanner" class="cookie-banner card-surface" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+      <p class="mb-0 small text-muted">RegRely uses minimal cookies for theme and experience preferences.</p>
+      <button id="cookieAccept" class="btn btn-sm btn-brand" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

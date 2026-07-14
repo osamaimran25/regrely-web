@@ -11,13 +11,13 @@
   <meta property="og:description" content="Privacy and risk automation for insurtech governance teams.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://regrely.com/industry-insurtech.html">
-  <meta property="og:image" content="https://regrely.com/assets/img/og-placeholder.svg">
+  <meta property="og:image" content="https://regrely.com/assets/img/og-default.jpg">
   <meta property="og:site_name" content="RegRely">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RegRely for Insurtech | Industry Workflow">
   <meta name="twitter:description" content="Insurtech privacy and risk workflows for policyholder data, claims operations, and audit-ready governance.">
-  <meta name="twitter:image" content="https://regrely.com/assets/img/og-placeholder.svg">
+  <meta name="twitter:image" content="https://regrely.com/assets/img/og-default.jpg">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://regrely.com/industry-insurtech.html">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -33,14 +33,7 @@
     posthog.init('POSTHOG_API_KEY', {api_host: 'https://eu.i.posthog.com', person_profiles: 'identified_only'});
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "RegRely",
-    "url": "https://regrely.com",
-    "logo": "https://regrely.com/assets/img/logo-mark.svg",
-    "description": "Privacy and risk automation platform with tenant isolation, RBAC, and evidence packs."
-  }
+  {"@context": "https://schema.org", "@type": "Organization", "@id": "https://regrely.com/#organization", "name": "RegRely", "url": "https://regrely.com/", "logo": "https://regrely.com/assets/img/logo-mark.svg", "image": "https://regrely.com/assets/img/og-default.jpg", "description": "RegRely is a privacy and compliance automation platform that helps growing companies run GDPR obligations without a compliance team — DSAR automation, ROPA mapping, consent tracking, compliance scans, risk registers, and audit-ready evidence.", "email": "info@regrely.com", "sameAs": ["https://www.linkedin.com/company/regrely"], "parentOrganization": {"@type": "Organization", "name": "Flowmoat", "url": "https://flowmoat.com/"}, "knowsAbout": ["GDPR compliance", "Data subject access requests", "Records of processing activities", "Consent management", "Privacy operations", "Compliance automation", "Risk registers", "Data protection impact assessments"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "info@regrely.com", "url": "https://regrely.com/contact.html", "availableLanguage": ["English"]}}
   </script>
   <script type="application/ld+json">
 {
@@ -118,6 +111,7 @@
             <li class="nav-item"><a class="nav-link" href="pricing.html" data-nav>Pricing</a></li>
             <li class="nav-item"><a class="nav-link" href="security.html" data-nav>Security</a></li>
             <li class="nav-item"><a class="nav-link" href="case-studies.html" data-nav>Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog/index.html" data-nav>Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html" data-nav>About</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html" data-nav>Contact</a></li>
           </ul>
@@ -134,6 +128,33 @@
     <section class="page-hero"><div class="container"><span class="badge badge-soft rounded-pill mb-3">Industry: Insurtech</span><h1>Govern privacy and risk across policy and claims lifecycles</h1><p>Connect underwriting, claims, and fraud workflows to one privacy and evidence operating model.</p></div></section>
     <section class="section-pad-sm"><div class="container"><div class="row g-3"><div class="col-lg-6"><div class="card-surface feature-card"><h2 class="h5">Primary pains</h2><ul class="mb-0"><li>Policyholder and claims data spread across disconnected systems</li><li>Strict timelines for requests, deletion, and legal hold coordination</li><li>Audit pressure on profiling, retention, and third-party processing</li></ul></div></div><div class="col-lg-6"><div class="card-surface feature-card"><h2 class="h5">Use cases</h2><ul class="mb-0"><li>DSAR orchestration across policy and claims records</li><li>Consent and notice version tracking from quote to claim</li><li>Risk register governance for model and vendor data exposure</li></ul></div></div><div class="col-lg-6"><div class="card-surface feature-card"><h2 class="h5">Suggested workflows</h2><p class="text-muted mb-0">Unified intake + retrieval automation + legal review + evidence export for regulator and internal audit requests.</p></div></div><div class="col-lg-6"><div class="card-surface feature-card"><h2 class="h5">Compliance mapping</h2><p class="text-muted mb-0">GDPR, CCPA, and UAE PDPL controls mapped to profiling transparency, retention discipline, and cross-border transfer oversight.</p></div></div></div></div></section>
     <section class="section-pad-sm"><div class="container"><div class="card-surface final-cta"><h2>Expected outcomes</h2><p class="text-muted">Faster request fulfillment, cleaner audit trails, and stronger governance for high-sensitivity insurance data.</p><button class="btn btn-brand" type="button" data-bs-toggle="modal" data-bs-target="#demoModal">Request Insurtech Demo</button></div></div></section>
+  
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="mb-3">Frequently asked questions</h2>
+        <div class="accordion" id="industryinsurtechFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#industryinsurtechFaq0" aria-expanded="true">Why is claims data high-risk under privacy law?</button></h3>
+            <div id="industryinsurtechFaq0" class="accordion-collapse collapse show" data-bs-parent="#industryinsurtechFaq"><div class="accordion-body">Because it routinely contains special-category data — health details, criminal allegations, financial hardship — often about people who are not the policyholder. Processing it needs an Article 9 condition on top of a lawful basis, and disclosure in a DSAR requires careful redaction of third parties.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#industryinsurtechFaq1" aria-expanded="false">Can we use automated risk scoring for underwriting?</button></h3>
+            <div id="industryinsurtechFaq1" class="accordion-collapse collapse" data-bs-parent="#industryinsurtechFaq"><div class="accordion-body">You can, but if the decision is solely automated and has a significant effect on the individual, GDPR Article 22 applies: you must inform them, offer human review, and be able to explain the logic. &#x27;The model decided&#x27; is not a defensible position with a regulator.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#industryinsurtechFaq2" aria-expanded="false">How should we handle data about third parties in a claim?</button></h3>
+            <div id="industryinsurtechFaq2" class="accordion-collapse collapse" data-bs-parent="#industryinsurtechFaq"><div class="accordion-body">A claim file frequently contains data about witnesses, other drivers, or family members who never dealt with you. They still have rights. That data needs a lawful basis, and it must be redacted from any disclosure to the policyholder unless there is a specific reason not to.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#industryinsurtechFaq3" aria-expanded="false">What is the retention obligation for insurance records?</button></h3>
+            <div id="industryinsurtechFaq3" class="accordion-collapse collapse" data-bs-parent="#industryinsurtechFaq"><div class="accordion-body">It is typically long, driven by limitation periods for claims rather than by privacy law — often many years after a policy ends. That makes an explicit, documented retention schedule essential, because the default of keeping everything forever is not defensible.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is claims data high-risk under privacy law?", "acceptedAnswer": {"@type": "Answer", "text": "Because it routinely contains special-category data — health details, criminal allegations, financial hardship — often about people who are not the policyholder. Processing it needs an Article 9 condition on top of a lawful basis, and disclosure in a DSAR requires careful redaction of third parties."}}, {"@type": "Question", "name": "Can we use automated risk scoring for underwriting?", "acceptedAnswer": {"@type": "Answer", "text": "You can, but if the decision is solely automated and has a significant effect on the individual, GDPR Article 22 applies: you must inform them, offer human review, and be able to explain the logic. 'The model decided' is not a defensible position with a regulator."}}, {"@type": "Question", "name": "How should we handle data about third parties in a claim?", "acceptedAnswer": {"@type": "Answer", "text": "A claim file frequently contains data about witnesses, other drivers, or family members who never dealt with you. They still have rights. That data needs a lawful basis, and it must be redacted from any disclosure to the policyholder unless there is a specific reason not to."}}, {"@type": "Question", "name": "What is the retention obligation for insurance records?", "acceptedAnswer": {"@type": "Answer", "text": "It is typically long, driven by limitation periods for claims rather than by privacy law — often many years after a policy ends. That makes an explicit, documented retention schedule essential, because the default of keeping everything forever is not defensible."}}]}
+  </script>
   </main>
 
   <footer class="footer">

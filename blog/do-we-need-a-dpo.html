@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fbff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#061632">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="shortcut icon" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>Do We Need a DPO? GDPR Requirements Explained | RegRely</title>
+  <meta name="description" content="When GDPR actually requires a Data Protection Officer, what the role must be able to do, and why appointing the wrong person creates a conflict of interest.">
+  <link rel="canonical" href="https://regrely.com/blog/do-we-need-a-dpo.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Do we need a Data Protection Officer?">
+  <meta property="og:description" content="When GDPR actually requires a Data Protection Officer, what the role must be able to do, and why appointing the wrong person creates a conflict of interest.">
+  <meta property="og:url" content="https://regrely.com/blog/do-we-need-a-dpo.html">
+  <meta property="og:image" content="https://regrely.com/assets/img/og-default.jpg">
+  <meta property="og:site_name" content="RegRely">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Do we need a Data Protection Officer?">
+  <meta name="twitter:description" content="When GDPR actually requires a Data Protection Officer, what the role must be able to do, and why appointing the wrong person creates a conflict of interest.">
+  <meta name="twitter:image" content="https://regrely.com/assets/img/og-default.jpg">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://regrely.com/blog/do-we-need-a-dpo.html#article", "headline": "Do we need a Data Protection Officer?", "description": "When GDPR actually requires a Data Protection Officer, what the role must be able to do, and why appointing the wrong person creates a conflict of interest.", "url": "https://regrely.com/blog/do-we-need-a-dpo.html", "datePublished": "2026-07-14", "dateModified": "2026-07-14", "author": {"@id": "https://regrely.com/#organization"}, "publisher": {"@id": "https://regrely.com/#organization"}, "image": "https://regrely.com/assets/img/og-default.jpg", "inLanguage": "en", "isPartOf": {"@id": "https://regrely.com/blog/#blog"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a DPO be an external contractor?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GDPR permits the DPO role to be fulfilled on a service contract, and outsourcing is common for smaller organisations. The same independence, expertise, and no-conflict requirements apply, and the organisation must publish the DPO's contact details and notify the supervisory authority."}}, {"@type": "Question", "name": "Can our CTO or Head of IT be the DPO?", "acceptedAnswer": {"@type": "Answer", "text": "Almost certainly not. Regulators have found that anyone who determines the purposes and means of processing has a conflict of interest, because they would be supervising their own decisions. In practice this excludes the CEO, CTO, Head of Marketing, and usually the Head of IT."}}, {"@type": "Question", "name": "Do we need a DPO to sell to enterprise customers?", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise buyers frequently ask, but the honest answer — that you are not in scope under Article 37 and have a named privacy owner instead — is generally accepted. Appointing an unqualified DPO to pass a questionnaire creates a real legal obligation to satisfy a procurement checkbox."}}, {"@type": "Question", "name": "What happens if we appoint a DPO with a conflict of interest?", "acceptedAnswer": {"@type": "Answer", "text": "You have voluntarily assumed the Article 38 obligations and then breached them, in writing. Supervisory authorities have issued fines specifically for DPO conflicts of interest, and the appointment itself is the evidence."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://regrely.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://regrely.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Do we need a Data Protection Officer?", "item": "https://regrely.com/blog/do-we-need-a-dpo.html"}]}
+  </script>
+</head>
+<body>
+
+  <a class="visually-hidden-focusable" href="#main-content">Skip to content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg glass-nav fixed-top" aria-label="Main navigation">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" data-nav>
+          <img src="../assets/img/logo-regrely.svg" alt="RegRely" class="brand-logo-nav" width="198" height="44">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Product</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../product-dsar.html" data-nav>DSAR Automation</a></li>
+                <li><a class="dropdown-item" href="../product-ropa.html" data-nav>ROPA Mapping</a></li>
+                <li><a class="dropdown-item" href="../product-consent.html" data-nav>Consent Tracking</a></li>
+                <li><a class="dropdown-item" href="../product-compliance-scan.html" data-nav>Compliance Scan</a></li>
+                <li><a class="dropdown-item" href="../product-reports.html" data-nav>Reports</a></li>
+                <li><a class="dropdown-item" href="../product-risk-register.html" data-nav>Risk Register</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../industries.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Industries</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../industry-saas.html" data-nav>SaaS</a></li>
+                <li><a class="dropdown-item" href="../industry-healthtech.html" data-nav>Healthtech</a></li>
+                <li><a class="dropdown-item" href="../industry-fintech.html" data-nav>Fintech</a></li>
+                <li><a class="dropdown-item" href="../industry-ecommerce.html" data-nav>Ecommerce</a></li>
+                <li><a class="dropdown-item" href="../industry-insurtech.html" data-nav>Insurtech</a></li>
+                <li><a class="dropdown-item" href="../industry-edtech.html" data-nav>Edtech</a></li>
+                <li><a class="dropdown-item" href="../industry-logistics.html" data-nav>Logistics</a></li>
+                <li><a class="dropdown-item" href="../industry-hr.html" data-nav>HR</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../regulation-gdpr.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Regulations</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>GDPR</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>CCPA</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>HIPAA</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>UAE PDPL</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pricing.html" data-nav>Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="../security.html" data-nav>Security</a></li>
+            <li class="nav-item"><a class="nav-link" href="../case-studies.html" data-nav>Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html" data-nav>Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html" data-nav>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../contact.html" data-nav>Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark Mode</button>
+            <a class="btn btn-brand" href="https://beta.regrely.com/" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="small mb-3">
+          <a href="../index.html">Home</a> <span class="text-muted">/</span>
+          <a href="index.html">Blog</a> <span class="text-muted">/</span>
+          <span class="text-muted">Risk Register</span>
+        </nav>
+        <h1>Do we need a Data Protection Officer?</h1>
+        <p class="text-muted mb-0">7 min read</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface answer-block mb-4">
+          <p class="mb-0">GDPR requires a Data Protection Officer in three cases: the organisation is a public authority; its core activities require large-scale, regular and systematic monitoring of individuals; or its core activities involve large-scale processing of special-category or criminal-conviction data. Otherwise a DPO is optional, though someone must still own data protection.</p>
+        </div>
+        <article class="post-body">
+<p>The question usually arrives from a board or a customer's security questionnaire, and it is nearly always answered too quickly — in one of two wrong directions.</p>
+<h2>When GDPR actually requires one</h2>
+<p>Article 37 lists three triggers. You need a DPO if:</p>
+<ol>
+<li>You are a <strong>public authority or body</strong> (courts acting judicially excepted).</li>
+<li>Your <strong>core activities</strong> consist of processing operations that require <strong>regular and systematic monitoring of data subjects on a large scale</strong>.</li>
+<li>Your <strong>core activities</strong> consist of <strong>large-scale processing of special-category data</strong> (health, biometrics, religion, politics, sexual orientation, and so on) or data on criminal convictions.</li>
+</ol>
+<p>Two words in there carry the weight.</p>
+<p><strong>Core activities.</strong> Not everything you do — what you fundamentally do to deliver your product or service. A hospital's core activity involves health data. A company that merely has an HR department processing employee sick notes does not thereby have a core activity of processing health data.</p>
+<p><strong>Large scale.</strong> Not defined by a number, which is unhelpful, but assessed on the volume of data, the number of individuals, the duration, and the geographical reach. A single clinic is generally not large scale. A national telecoms operator is.</p>
+<p>Most SaaS and ecommerce companies meet none of the three, and do not need a DPO.</p>
+<h2>The trap: appointing one anyway, badly</h2>
+<p>Plenty of companies appoint a DPO voluntarily — to reassure enterprise customers, or because a questionnaire asked and "no" felt like a bad answer.</p>
+<p>Here is the catch: <strong>if you appoint a DPO, the Article 38 and 39 obligations apply to that role regardless of whether you were required to have one.</strong> You have voluntarily taken on a set of duties. And the most commonly breached of those is independence.</p>
+<p>A DPO must:</p>
+<ul>
+<li>be involved <strong>properly and in a timely manner</strong> in all data protection matters</li>
+<li>report to the <strong>highest level of management</strong></li>
+<li><strong>not receive instructions</strong> on how to perform the role</li>
+<li><strong>not be dismissed or penalised</strong> for performing it</li>
+<li><strong>not have a conflict of interest</strong> with other duties they hold</li>
+</ul>
+<p>That last point is where it goes wrong. Regulators have found that the DPO cannot be the person who <em>determines the purposes and means of processing</em> — because they would be marking their own homework. In practice this rules out the CEO, the CTO, the Head of Marketing, and usually the Head of IT.</p>
+<p>Appointing your CTO as DPO to satisfy a questionnaire is not a neutral act. It is a documented conflict of interest, in writing, that you handed to the regulator yourself.</p>
+<h2>If you do not need a DPO, you still need an owner</h2>
+<p>Not needing a DPO does not mean not needing accountability. GDPR's accountability principle applies regardless. Someone has to:</p>
+<ul>
+<li>keep the <a href="../product-ropa.html">record of processing</a> current</li>
+<li>handle <a href="../product-dsar.html">data subject requests</a> within the deadline</li>
+<li>maintain a <a href="../product-risk-register.html">risk register</a> and run DPIAs where required</li>
+<li>respond to security reviews and regulator correspondence</li>
+</ul>
+<p>Call the role whatever you like — Privacy Lead, Compliance Owner — as long as it is named, resourced, and not the person whose incentives run the other way. What you must not do is call it a DPO if you are not going to give it the independence a DPO is legally owed.</p>
+<h2>The honest test</h2>
+<p>Ask two questions:</p>
+<p><strong>Is monitoring or special-category data what our product fundamentally does?</strong> If yes, you likely need a DPO and should get proper advice on it.</p>
+<p><strong>If no — who is accountable today, and can they actually act?</strong> If the answer is "nobody, really," that is the gap to close. It is a resourcing decision, not a titling decision, and giving someone a title without authority solves nothing while creating an obligation you have not thought about.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+      <h2 class="mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="doweneedadpoFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#doweneedadpoFaq0" aria-expanded="true">Can a DPO be an external contractor?</button></h3>
+          <div id="doweneedadpoFaq0" class="accordion-collapse collapse show" data-bs-parent="#doweneedadpoFaq"><div class="accordion-body">Yes. GDPR permits the DPO role to be fulfilled on a service contract, and outsourcing is common for smaller organisations. The same independence, expertise, and no-conflict requirements apply, and the organisation must publish the DPO&#x27;s contact details and notify the supervisory authority.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doweneedadpoFaq1" aria-expanded="false">Can our CTO or Head of IT be the DPO?</button></h3>
+          <div id="doweneedadpoFaq1" class="accordion-collapse collapse" data-bs-parent="#doweneedadpoFaq"><div class="accordion-body">Almost certainly not. Regulators have found that anyone who determines the purposes and means of processing has a conflict of interest, because they would be supervising their own decisions. In practice this excludes the CEO, CTO, Head of Marketing, and usually the Head of IT.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doweneedadpoFaq2" aria-expanded="false">Do we need a DPO to sell to enterprise customers?</button></h3>
+          <div id="doweneedadpoFaq2" class="accordion-collapse collapse" data-bs-parent="#doweneedadpoFaq"><div class="accordion-body">Enterprise buyers frequently ask, but the honest answer — that you are not in scope under Article 37 and have a named privacy owner instead — is generally accepted. Appointing an unqualified DPO to pass a questionnaire creates a real legal obligation to satisfy a procurement checkbox.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doweneedadpoFaq3" aria-expanded="false">What happens if we appoint a DPO with a conflict of interest?</button></h3>
+          <div id="doweneedadpoFaq3" class="accordion-collapse collapse" data-bs-parent="#doweneedadpoFaq"><div class="accordion-body">You have voluntarily assumed the Article 38 obligations and then breached them, in writing. Supervisory authorities have issued fines specifically for DPO conflicts of interest, and the appointment itself is the evidence.</div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2>Risk Register</h2>
+          <p class="text-muted">See how RegRely turns this into a repeatable, evidenced workflow.</p>
+          <a class="btn btn-brand" href="../product-risk-register.html">Explore Risk Register</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="h4 mb-3">Keep reading</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="how-to-respond-to-a-dsar.html">
+              <h3 class="h6 mb-2">How to respond to a DSAR: a step-by-step process</h3>
+              <p class="small text-muted mb-0">The deadline starts the moment it arrives, not the moment you notice it. Here is the process, step by step.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="what-is-a-ropa.html">
+              <h3 class="h6 mb-2">What is a ROPA, and does your company need one?</h3>
+              <p class="small text-muted mb-0">Most companies think the 250-employee threshold exempts them. It almost never does.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-shell">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="navbar-brand d-inline-flex align-items-center gap-2" href="../index.html">
+              <img src="../assets/img/logo-regrely.svg" alt="RegRely" class="brand-logo-footer" width="176" height="38">
+            </a>
+            <p class="footer-copy mt-3 mb-0">Privacy and risk operations platform built for audit readiness, faster response cycles, and clean tenant separation.</p>
+            <div class="footer-contact-card mt-3">
+              <p class="mb-1">Talk to the RegRely team</p>
+              <a class="footer-email" href="mailto:info@regrely.com">info@regrely.com</a>
+              <a class="footer-social-link" href="https://www.linkedin.com/company/regrely" target="_blank" rel="noopener noreferrer" aria-label="RegRely on LinkedIn">
+                <img src="../assets/img/linkedin.svg" alt="LinkedIn" width="20" height="20">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Product</h3>
+            <a href="../product.html">Overview</a><br>
+            <a href="../product-dsar.html">DSAR</a><br>
+            <a href="../product-risk-register.html">Risk Register</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Company</h3>
+            <a href="../about.html">About</a><br>
+            <a href="../security.html">Security</a><br>
+            <a href="../contact.html">Contact</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Resources</h3>
+            <a href="../pricing.html">Pricing</a><br>
+            <a href="../case-studies.html">Case Studies</a><br>
+            <a href="../ai-demo.html">AI Demo</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Legal</h3>
+            <a href="../terms.html">Terms</a><br>
+            <a href="../privacy.html">Privacy</a><br>
+            <a href="../security.html#responsible-disclosure">Disclosure</a>
+          </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <p class="text-muted small mb-0">© 2026 RegRely. All rights reserved.</p>
+          <div class="d-flex flex-wrap gap-3 small">
+            <a href="../contact.html">Talk to Sales</a>
+            <a href="../security.html">Trust Center</a>
+            <a href="../pricing.html">Plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="demoModalLabel">Request a RegRely Demo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="demoForm" novalidate>
+            <div class="mb-3">
+              <label for="demoName" class="form-label">Name</label>
+              <input id="demoName" class="form-control" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoEmail" class="form-label">Work email</label>
+              <input id="demoEmail" class="form-control" type="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid work email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoCompany" class="form-label">Company</label>
+              <input id="demoCompany" class="form-control" name="company" required>
+              <div class="invalid-feedback">Please enter your company.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoSize" class="form-label">Team size</label>
+              <select id="demoSize" class="form-select" name="team_size" required>
+                <option value="">Choose one...</option>
+                <option>1-50</option>
+                <option>51-200</option>
+                <option>201-1000</option>
+                <option>1000+</option>
+              </select>
+              <div class="invalid-feedback">Please select your team size.</div>
+            </div>
+            <p id="demoFormSuccess" class="alert alert-success d-none" role="status"></p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-brand">Submit Request</button>
+              <button type="button" class="btn btn-ghost" id="copyDemoTemplate">Copy Email Template</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookieBanner" class="cookie-banner card-surface" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+      <p class="mb-0 small text-muted">RegRely uses minimal cookies for theme and experience preferences.</p>
+      <button id="cookieAccept" class="btn btn-sm btn-brand" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+
+
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="demoModalLabel">Request a RegRely Demo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="demoForm" novalidate>
+            <div class="mb-3">
+              <label for="demoName" class="form-label">Name</label>
+              <input id="demoName" class="form-control" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoEmail" class="form-label">Work email</label>
+              <input id="demoEmail" class="form-control" type="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid work email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoCompany" class="form-label">Company</label>
+              <input id="demoCompany" class="form-control" name="company" required>
+              <div class="invalid-feedback">Please enter your company.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoSize" class="form-label">Team size</label>
+              <select id="demoSize" class="form-select" name="team_size" required>
+                <option value="">Choose one...</option>
+                <option>1-50</option>
+                <option>51-200</option>
+                <option>201-1000</option>
+                <option>1000+</option>
+              </select>
+              <div class="invalid-feedback">Please select your team size.</div>
+            </div>
+            <p id="demoFormSuccess" class="alert alert-success d-none" role="status"></p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-brand">Submit Request</button>
+              <button type="button" class="btn btn-ghost" id="copyDemoTemplate">Copy Email Template</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookieBanner" class="cookie-banner card-surface" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+      <p class="mb-0 small text-muted">RegRely uses minimal cookies for theme and experience preferences.</p>
+      <button id="cookieAccept" class="btn btn-sm btn-brand" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fbff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#061632">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="shortcut icon" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <title>When Is a DPIA Required? GDPR Article 35 | RegRely</title>
+  <meta name="description" content="The criteria that trigger a data protection impact assessment under GDPR Article 35, what a DPIA must contain, and what to do when the residual risk stays high.">
+  <link rel="canonical" href="https://regrely.com/blog/when-is-a-dpia-required.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="When is a DPIA required, and what goes in one?">
+  <meta property="og:description" content="The criteria that trigger a data protection impact assessment under GDPR Article 35, what a DPIA must contain, and what to do when the residual risk stays high.">
+  <meta property="og:url" content="https://regrely.com/blog/when-is-a-dpia-required.html">
+  <meta property="og:image" content="https://regrely.com/assets/img/og-default.jpg">
+  <meta property="og:site_name" content="RegRely">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="When is a DPIA required, and what goes in one?">
+  <meta name="twitter:description" content="The criteria that trigger a data protection impact assessment under GDPR Article 35, what a DPIA must contain, and what to do when the residual risk stays high.">
+  <meta name="twitter:image" content="https://regrely.com/assets/img/og-default.jpg">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://regrely.com/blog/when-is-a-dpia-required.html#article", "headline": "When is a DPIA required, and what goes in one?", "description": "The criteria that trigger a data protection impact assessment under GDPR Article 35, what a DPIA must contain, and what to do when the residual risk stays high.", "url": "https://regrely.com/blog/when-is-a-dpia-required.html", "datePublished": "2026-07-14", "dateModified": "2026-07-14", "author": {"@id": "https://regrely.com/#organization"}, "publisher": {"@id": "https://regrely.com/#organization"}, "image": "https://regrely.com/assets/img/og-default.jpg", "inLanguage": "en", "isPartOf": {"@id": "https://regrely.com/blog/#blog"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who should carry out a DPIA?", "acceptedAnswer": {"@type": "Answer", "text": "The controller is responsible, and must seek the advice of the DPO where one is appointed. In practice it is completed by the product or system owner with privacy input — the person who knows what the system actually does — rather than written by compliance in isolation."}}, {"@type": "Question", "name": "Do we need a DPIA for every new feature?", "acceptedAnswer": {"@type": "Answer", "text": "No. Only where processing is likely to result in a high risk. The working test used by most supervisory authorities is whether the processing meets two or more of the nine criteria — profiling, automated decisions, monitoring, sensitive data, large scale, data matching, vulnerable subjects, innovative technology, or blocking a right."}}, {"@type": "Question", "name": "What if the DPIA shows high residual risk?", "acceptedAnswer": {"@type": "Answer", "text": "Article 36 requires you to consult the supervisory authority before starting the processing, and to wait for its response — up to eight weeks, extendable by six. In most cases the better answer is to redesign the processing until the residual risk is no longer high."}}, {"@type": "Question", "name": "Is a DPIA required for AI features?", "acceptedAnswer": {"@type": "Answer", "text": "Frequently, yes. AI features often meet criterion 8 (innovative use of new technology) and criterion 1 (evaluation or scoring) simultaneously — which is two of the nine, and therefore the working threshold for a mandatory DPIA."}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://regrely.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://regrely.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "When is a DPIA required, and what goes in one?", "item": "https://regrely.com/blog/when-is-a-dpia-required.html"}]}
+  </script>
+</head>
+<body>
+
+  <a class="visually-hidden-focusable" href="#main-content">Skip to content</a>
+  <header>
+    <nav class="navbar navbar-expand-lg glass-nav fixed-top" aria-label="Main navigation">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" data-nav>
+          <img src="../assets/img/logo-regrely.svg" alt="RegRely" class="brand-logo-nav" width="198" height="44">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../product.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Product</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../product-dsar.html" data-nav>DSAR Automation</a></li>
+                <li><a class="dropdown-item" href="../product-ropa.html" data-nav>ROPA Mapping</a></li>
+                <li><a class="dropdown-item" href="../product-consent.html" data-nav>Consent Tracking</a></li>
+                <li><a class="dropdown-item" href="../product-compliance-scan.html" data-nav>Compliance Scan</a></li>
+                <li><a class="dropdown-item" href="../product-reports.html" data-nav>Reports</a></li>
+                <li><a class="dropdown-item" href="../product-risk-register.html" data-nav>Risk Register</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../industries.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Industries</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../industry-saas.html" data-nav>SaaS</a></li>
+                <li><a class="dropdown-item" href="../industry-healthtech.html" data-nav>Healthtech</a></li>
+                <li><a class="dropdown-item" href="../industry-fintech.html" data-nav>Fintech</a></li>
+                <li><a class="dropdown-item" href="../industry-ecommerce.html" data-nav>Ecommerce</a></li>
+                <li><a class="dropdown-item" href="../industry-insurtech.html" data-nav>Insurtech</a></li>
+                <li><a class="dropdown-item" href="../industry-edtech.html" data-nav>Edtech</a></li>
+                <li><a class="dropdown-item" href="../industry-logistics.html" data-nav>Logistics</a></li>
+                <li><a class="dropdown-item" href="../industry-hr.html" data-nav>HR</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="../regulation-gdpr.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-nav>Regulations</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>GDPR</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>CCPA</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>HIPAA</a></li>
+                <li><a class="dropdown-item" href="../regulation-gdpr.html" data-nav>UAE PDPL</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="../pricing.html" data-nav>Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="../security.html" data-nav>Security</a></li>
+            <li class="nav-item"><a class="nav-link" href="../case-studies.html" data-nav>Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html" data-nav>Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html" data-nav>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../contact.html" data-nav>Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark Mode</button>
+            <a class="btn btn-brand" href="https://beta.regrely.com/" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="small mb-3">
+          <a href="../index.html">Home</a> <span class="text-muted">/</span>
+          <a href="index.html">Blog</a> <span class="text-muted">/</span>
+          <span class="text-muted">Risk Register</span>
+        </nav>
+        <h1>When is a DPIA required, and what goes in one?</h1>
+        <p class="text-muted mb-0">7 min read</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface answer-block mb-4">
+          <p class="mb-0">A DPIA is required under GDPR Article 35 when processing is likely to result in a high risk to individuals — in particular for systematic and extensive automated evaluation or profiling, large-scale processing of special-category data, or large-scale systematic monitoring of a publicly accessible area. Regulators treat meeting two of nine criteria as the working threshold.</p>
+        </div>
+        <article class="post-body">
+<p>A data protection impact assessment is not paperwork you produce after the fact to justify a decision already made. It is a design-stage exercise, and its whole value lies in being done early enough that the answer can still change what you build.</p>
+<p>Done late, it is a formality. Done on time, it occasionally kills a feature — which is the point.</p>
+<h2>When it is mandatory</h2>
+<p>Article 35 requires a DPIA where processing is <strong>likely to result in a high risk</strong> to the rights and freedoms of individuals, and specifically calls out three cases:</p>
+<ul>
+<li><strong>Systematic and extensive evaluation</strong> based on automated processing, including profiling, on which decisions with legal or similarly significant effects are based</li>
+<li><strong>Large-scale processing of special-category data</strong> or criminal-conviction data</li>
+<li><strong>Large-scale systematic monitoring of a publicly accessible area</strong></li>
+</ul>
+<p>Because "high risk" is vague, regulators published nine criteria. The working rule most supervisory authorities apply: <strong>if processing meets two or more, do a DPIA.</strong></p>
+<ol>
+<li>Evaluation or scoring, including profiling and prediction</li>
+<li>Automated decision-making with legal or similar significant effect</li>
+<li>Systematic monitoring</li>
+<li>Sensitive data or data of a highly personal nature</li>
+<li>Data processed on a large scale</li>
+<li>Matching or combining datasets</li>
+<li>Data concerning vulnerable data subjects (children, employees, patients)</li>
+<li>Innovative use or applying new technological or organisational solutions</li>
+<li>Processing that prevents data subjects from exercising a right or using a service</li>
+</ol>
+<p>Read criterion 8 carefully. <strong>"Innovative use of new technology"</strong> is exactly where most AI features land — and criterion 1 catches scoring and prediction. A new AI feature that scores users is two criteria on its own.</p>
+<h2>What has to be in it</h2>
+<p>Article 35(7) sets the minimum:</p>
+<ul>
+<li>a <strong>systematic description</strong> of the processing, its purposes, and the legitimate interest pursued</li>
+<li>an assessment of the <strong>necessity and proportionality</strong> of the processing relative to the purpose</li>
+<li>an assessment of the <strong>risks to the rights and freedoms</strong> of data subjects</li>
+<li>the <strong>measures envisaged to address those risks</strong> — safeguards, security measures, and mechanisms to demonstrate compliance</li>
+</ul>
+<p>The second one is the one teams skip, and it is the one that does the work. <em>Necessity and proportionality</em> asks: could you achieve the same purpose with less data, less intrusion, or a shorter retention? If the answer is yes and you did not, the DPIA has just told you the processing is unlawful — and writing it down anyway is worse than not having asked.</p>
+<h2>What happens if the risk stays high</h2>
+<p>This is the part almost nobody knows.</p>
+<p>If, after all your mitigations, the <strong>residual risk is still high</strong>, Article 36 requires you to <strong>consult the supervisory authority before you start processing</strong>. Not notify. Consult — and wait.</p>
+<p>The regulator has up to eight weeks to respond, extendable by six. Which means that for a feature in this category, prior consultation is not a compliance formality; it is a <strong>release blocker with a multi-month lead time</strong>, and it needs to be on the roadmap rather than discovered a fortnight before launch.</p>
+<p>The correct response to a high residual risk is usually to change the design until the risk is no longer high.</p>
+<h2>Making it survivable</h2>
+<p>Three things separate a DPIA process that works from one that becomes theatre:</p>
+<p><strong>Trigger it from the product process, not the compliance calendar.</strong> A DPIA should be raised when a feature is specified, not when someone remembers. If it is not in the definition-of-ready, it will be done retrospectively and be worthless.</p>
+<p><strong>Connect it to the <a href="../product-risk-register.html">risk register</a>.</strong> The risks a DPIA surfaces do not vanish when the document is signed. They become live risks with owners, mitigations, and residual ratings that someone has to accept.</p>
+<p><strong>Write down what you decided not to do.</strong> The rejected, more intrusive design is evidence of proportionality — and it is the single most useful thing to have when a regulator asks why you built it this way.</p>
+<p>Skipping a required DPIA is itself an infringement, and it is easy for a regulator to prove: the feature exists, the assessment does not.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+      <h2 class="mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="whenisadpiarequiredFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq0" aria-expanded="true">Who should carry out a DPIA?</button></h3>
+          <div id="whenisadpiarequiredFaq0" class="accordion-collapse collapse show" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">The controller is responsible, and must seek the advice of the DPO where one is appointed. In practice it is completed by the product or system owner with privacy input — the person who knows what the system actually does — rather than written by compliance in isolation.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq1" aria-expanded="false">Do we need a DPIA for every new feature?</button></h3>
+          <div id="whenisadpiarequiredFaq1" class="accordion-collapse collapse" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">No. Only where processing is likely to result in a high risk. The working test used by most supervisory authorities is whether the processing meets two or more of the nine criteria — profiling, automated decisions, monitoring, sensitive data, large scale, data matching, vulnerable subjects, innovative technology, or blocking a right.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq2" aria-expanded="false">What if the DPIA shows high residual risk?</button></h3>
+          <div id="whenisadpiarequiredFaq2" class="accordion-collapse collapse" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">Article 36 requires you to consult the supervisory authority before starting the processing, and to wait for its response — up to eight weeks, extendable by six. In most cases the better answer is to redesign the processing until the residual risk is no longer high.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq3" aria-expanded="false">Is a DPIA required for AI features?</button></h3>
+          <div id="whenisadpiarequiredFaq3" class="accordion-collapse collapse" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">Frequently, yes. AI features often meet criterion 8 (innovative use of new technology) and criterion 1 (evaluation or scoring) simultaneously — which is two of the nine, and therefore the working threshold for a mandatory DPIA.</div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2>Risk Register</h2>
+          <p class="text-muted">See how RegRely turns this into a repeatable, evidenced workflow.</p>
+          <a class="btn btn-brand" href="../product-risk-register.html">Explore Risk Register</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="h4 mb-3">Keep reading</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="how-to-respond-to-a-dsar.html">
+              <h3 class="h6 mb-2">How to respond to a DSAR: a step-by-step process</h3>
+              <p class="small text-muted mb-0">The deadline starts the moment it arrives, not the moment you notice it. Here is the process, step by step.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="what-is-a-ropa.html">
+              <h3 class="h6 mb-2">What is a ROPA, and does your company need one?</h3>
+              <p class="small text-muted mb-0">Most companies think the 250-employee threshold exempts them. It almost never does.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-shell">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="navbar-brand d-inline-flex align-items-center gap-2" href="../index.html">
+              <img src="../assets/img/logo-regrely.svg" alt="RegRely" class="brand-logo-footer" width="176" height="38">
+            </a>
+            <p class="footer-copy mt-3 mb-0">Privacy and risk operations platform built for audit readiness, faster response cycles, and clean tenant separation.</p>
+            <div class="footer-contact-card mt-3">
+              <p class="mb-1">Talk to the RegRely team</p>
+              <a class="footer-email" href="mailto:info@regrely.com">info@regrely.com</a>
+              <a class="footer-social-link" href="https://www.linkedin.com/company/regrely" target="_blank" rel="noopener noreferrer" aria-label="RegRely on LinkedIn">
+                <img src="../assets/img/linkedin.svg" alt="LinkedIn" width="20" height="20">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Product</h3>
+            <a href="../product.html">Overview</a><br>
+            <a href="../product-dsar.html">DSAR</a><br>
+            <a href="../product-risk-register.html">Risk Register</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Company</h3>
+            <a href="../about.html">About</a><br>
+            <a href="../security.html">Security</a><br>
+            <a href="../contact.html">Contact</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Resources</h3>
+            <a href="../pricing.html">Pricing</a><br>
+            <a href="../case-studies.html">Case Studies</a><br>
+            <a href="../ai-demo.html">AI Demo</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h3 class="h6 footer-title">Legal</h3>
+            <a href="../terms.html">Terms</a><br>
+            <a href="../privacy.html">Privacy</a><br>
+            <a href="../security.html#responsible-disclosure">Disclosure</a>
+          </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <p class="text-muted small mb-0">© 2026 RegRely. All rights reserved.</p>
+          <div class="d-flex flex-wrap gap-3 small">
+            <a href="../contact.html">Talk to Sales</a>
+            <a href="../security.html">Trust Center</a>
+            <a href="../pricing.html">Plans</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="demoModalLabel">Request a RegRely Demo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="demoForm" novalidate>
+            <div class="mb-3">
+              <label for="demoName" class="form-label">Name</label>
+              <input id="demoName" class="form-control" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoEmail" class="form-label">Work email</label>
+              <input id="demoEmail" class="form-control" type="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid work email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoCompany" class="form-label">Company</label>
+              <input id="demoCompany" class="form-control" name="company" required>
+              <div class="invalid-feedback">Please enter your company.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoSize" class="form-label">Team size</label>
+              <select id="demoSize" class="form-select" name="team_size" required>
+                <option value="">Choose one...</option>
+                <option>1-50</option>
+                <option>51-200</option>
+                <option>201-1000</option>
+                <option>1000+</option>
+              </select>
+              <div class="invalid-feedback">Please select your team size.</div>
+            </div>
+            <p id="demoFormSuccess" class="alert alert-success d-none" role="status"></p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-brand">Submit Request</button>
+              <button type="button" class="btn btn-ghost" id="copyDemoTemplate">Copy Email Template</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookieBanner" class="cookie-banner card-surface" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+      <p class="mb-0 small text-muted">RegRely uses minimal cookies for theme and experience preferences.</p>
+      <button id="cookieAccept" class="btn btn-sm btn-brand" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+
+
+
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="demoModalLabel">Request a RegRely Demo</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="demoForm" novalidate>
+            <div class="mb-3">
+              <label for="demoName" class="form-label">Name</label>
+              <input id="demoName" class="form-control" name="name" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoEmail" class="form-label">Work email</label>
+              <input id="demoEmail" class="form-control" type="email" name="email" required>
+              <div class="invalid-feedback">Please enter a valid work email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoCompany" class="form-label">Company</label>
+              <input id="demoCompany" class="form-control" name="company" required>
+              <div class="invalid-feedback">Please enter your company.</div>
+            </div>
+            <div class="mb-3">
+              <label for="demoSize" class="form-label">Team size</label>
+              <select id="demoSize" class="form-select" name="team_size" required>
+                <option value="">Choose one...</option>
+                <option>1-50</option>
+                <option>51-200</option>
+                <option>201-1000</option>
+                <option>1000+</option>
+              </select>
+              <div class="invalid-feedback">Please select your team size.</div>
+            </div>
+            <p id="demoFormSuccess" class="alert alert-success d-none" role="status"></p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-brand">Submit Request</button>
+              <button type="button" class="btn btn-ghost" id="copyDemoTemplate">Copy Email Template</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookieBanner" class="cookie-banner card-surface" role="dialog" aria-live="polite" aria-label="Cookie notice">
+    <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
+      <p class="mb-0 small text-muted">RegRely uses minimal cookies for theme and experience preferences.</p>
+      <button id="cookieAccept" class="btn btn-sm btn-brand" type="button">Accept</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

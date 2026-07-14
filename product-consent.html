@@ -11,13 +11,13 @@
   <meta property="og:description" content="Consent lifecycle tracking with policy evidence.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://regrely.com/product-consent.html">
-  <meta property="og:image" content="https://regrely.com/assets/img/og-placeholder.svg">
+  <meta property="og:image" content="https://regrely.com/assets/img/og-default.jpg">
   <meta property="og:site_name" content="RegRely">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="RegRely Consent Tracking | Product Module">
   <meta name="twitter:description" content="Manage consent status, policy versions, and revocation workflows with RegRely consent tracking.">
-  <meta name="twitter:image" content="https://regrely.com/assets/img/og-placeholder.svg">
+  <meta name="twitter:image" content="https://regrely.com/assets/img/og-default.jpg">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://regrely.com/product-consent.html">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -33,14 +33,7 @@
     posthog.init('POSTHOG_API_KEY', {api_host: 'https://eu.i.posthog.com', person_profiles: 'identified_only'});
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "RegRely",
-    "url": "https://regrely.com",
-    "logo": "https://regrely.com/assets/img/logo-mark.svg",
-    "description": "Privacy and risk automation platform with tenant isolation, RBAC, and evidence packs."
-  }
+  {"@context": "https://schema.org", "@type": "Organization", "@id": "https://regrely.com/#organization", "name": "RegRely", "url": "https://regrely.com/", "logo": "https://regrely.com/assets/img/logo-mark.svg", "image": "https://regrely.com/assets/img/og-default.jpg", "description": "RegRely is a privacy and compliance automation platform that helps growing companies run GDPR obligations without a compliance team — DSAR automation, ROPA mapping, consent tracking, compliance scans, risk registers, and audit-ready evidence.", "email": "info@regrely.com", "sameAs": ["https://www.linkedin.com/company/regrely"], "parentOrganization": {"@type": "Organization", "name": "Flowmoat", "url": "https://flowmoat.com/"}, "knowsAbout": ["GDPR compliance", "Data subject access requests", "Records of processing activities", "Consent management", "Privacy operations", "Compliance automation", "Risk registers", "Data protection impact assessments"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "info@regrely.com", "url": "https://regrely.com/contact.html", "availableLanguage": ["English"]}}
   </script>
   <script type="application/ld+json">
 {
@@ -118,6 +111,7 @@
             <li class="nav-item"><a class="nav-link" href="pricing.html" data-nav>Pricing</a></li>
             <li class="nav-item"><a class="nav-link" href="security.html" data-nav>Security</a></li>
             <li class="nav-item"><a class="nav-link" href="case-studies.html" data-nav>Case Studies</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog/index.html" data-nav>Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html" data-nav>About</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html" data-nav>Contact</a></li>
           </ul>
@@ -140,6 +134,33 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Product","name":"RegRely Consent Tracking","description":"Consent capture, versioning, revocation, and evidence workflows.","brand":{"@type":"Brand","name":"RegRely"}}
     </script>
+  
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="mb-3">Frequently asked questions</h2>
+        <div class="accordion" id="productconsentFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#productconsentFaq0" aria-expanded="true">What is consent management?</button></h3>
+            <div id="productconsentFaq0" class="accordion-collapse collapse show" data-bs-parent="#productconsentFaq"><div class="accordion-body">Consent management is the practice of capturing, storing, and honouring an individual&#x27;s permission to process their data — including the ability to withdraw it. It covers what they agreed to, which version of the policy they saw, when they agreed, and what happened when they changed their mind.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productconsentFaq1" aria-expanded="false">Is consent always required to process personal data?</button></h3>
+            <div id="productconsentFaq1" class="accordion-collapse collapse" data-bs-parent="#productconsentFaq"><div class="accordion-body">No. Consent is one of six lawful bases under GDPR, and often not the right one. Processing needed to deliver a contract, or justified by legitimate interests, does not require consent. Asking for consent you do not need creates an obligation to honour a withdrawal you did not have to accept.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productconsentFaq2" aria-expanded="false">What makes consent valid under GDPR?</button></h3>
+            <div id="productconsentFaq2" class="accordion-collapse collapse" data-bs-parent="#productconsentFaq"><div class="accordion-body">It must be freely given, specific, informed, and unambiguous — an affirmative action, not a pre-ticked box or continued browsing. It must be as easy to withdraw as it was to give, and you must be able to demonstrate that it was obtained.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productconsentFaq3" aria-expanded="false">What has to happen when someone withdraws consent?</button></h3>
+            <div id="productconsentFaq3" class="accordion-collapse collapse" data-bs-parent="#productconsentFaq"><div class="accordion-body">Processing that relied on that consent must stop, and the withdrawal must propagate to every downstream system that received the data. The hard part is not the button — it is proving, months later, that the withdrawal actually reached the marketing platform, the analytics tool, and the data warehouse.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is consent management?", "acceptedAnswer": {"@type": "Answer", "text": "Consent management is the practice of capturing, storing, and honouring an individual's permission to process their data — including the ability to withdraw it. It covers what they agreed to, which version of the policy they saw, when they agreed, and what happened when they changed their mind."}}, {"@type": "Question", "name": "Is consent always required to process personal data?", "acceptedAnswer": {"@type": "Answer", "text": "No. Consent is one of six lawful bases under GDPR, and often not the right one. Processing needed to deliver a contract, or justified by legitimate interests, does not require consent. Asking for consent you do not need creates an obligation to honour a withdrawal you did not have to accept."}}, {"@type": "Question", "name": "What makes consent valid under GDPR?", "acceptedAnswer": {"@type": "Answer", "text": "It must be freely given, specific, informed, and unambiguous — an affirmative action, not a pre-ticked box or continued browsing. It must be as easy to withdraw as it was to give, and you must be able to demonstrate that it was obtained."}}, {"@type": "Question", "name": "What has to happen when someone withdraws consent?", "acceptedAnswer": {"@type": "Answer", "text": "Processing that relied on that consent must stop, and the withdrawal must propagate to every downstream system that received the data. The hard part is not the button — it is proving, months later, that the withdrawal actually reached the marketing platform, the analytics tool, and the data warehouse."}}]}
+  </script>
   </main>
 
   <footer class="footer">
