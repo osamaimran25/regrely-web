@@ -27,11 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <!-- PostHog Analytics — replace POSTHOG_API_KEY with your real key -->
-  <script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureFlagEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('POSTHOG_API_KEY', {api_host: 'https://eu.i.posthog.com', person_profiles: 'identified_only'});
-  </script>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Organization", "@id": "https://regrely.com/#organization", "name": "RegRely", "url": "https://regrely.com/", "logo": "https://regrely.com/assets/img/logo-mark.svg", "image": "https://regrely.com/assets/img/og-default.jpg", "description": "RegRely is a privacy and compliance automation platform that helps growing companies run GDPR obligations without a compliance team — DSAR automation, ROPA mapping, consent tracking, compliance scans, risk registers, and audit-ready evidence.", "email": "info@regrely.com", "sameAs": ["https://www.linkedin.com/company/regrely"], "parentOrganization": {"@type": "Organization", "name": "Flowmoat", "url": "https://flowmoat.com/"}, "knowsAbout": ["GDPR compliance", "Data subject access requests", "Records of processing activities", "Consent management", "Privacy operations", "Compliance automation", "Risk registers", "Data protection impact assessments"], "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "info@regrely.com", "url": "https://regrely.com/contact.html", "availableLanguage": ["English"]}}
   </script>
@@ -136,6 +131,19 @@
   <main id="main-content" class="page-wrap">
     <section class="page-hero"><div class="container"><span class="badge badge-soft rounded-pill mb-3">Illustrative Case Study</span><h1>Illustrative healthtech team cuts audit preparation time by 60%</h1><p>A representative healthtech organization needed stronger control evidence for privacy and security audits across its platform ecosystem.</p></div></section>
     <section class="section-pad-sm"><div class="container"><img src="assets/img/case-study-2.svg" alt="Illustrative healthtech case study visual" class="rounded mb-4"><div class="row g-3"><div class="col-lg-4"><div class="card-surface feature-card"><h2 class="h6">Challenge</h2><p class="text-muted mb-0">Evidence lived in disconnected files, slowing responses to internal and external audit requests.</p></div></div><div class="col-lg-4"><div class="card-surface feature-card"><h2 class="h6">Solution</h2><p class="text-muted mb-0">Adopted compliance scan, findings workflows, and risk register governance with health-sector mappings.</p></div></div><div class="col-lg-4"><div class="card-surface feature-card"><h2 class="h6">Results</h2><ul class="mb-0"><li>60% faster audit prep</li><li>41% faster remediation cycles</li><li>Single evidence pack per audit request</li></ul></div></div></div><div class="card-surface p-4 mt-3"><h2 class="h5">Operational impact</h2><p class="text-muted mb-0">The team now runs monthly risk reviews with owner-level accountability and standardized reporting for leadership and auditors.</p></div><p class="small text-muted mt-3 mb-0">Illustrative example based on common implementation patterns.</p></div></section>
+  
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2 class="mb-2">See RegRely on your own compliance workload.</h2>
+          <p class="text-muted">Book a walkthrough, or start a free 14-day trial and try it against your own data.</p>
+          <div class="d-flex justify-content-center gap-2 flex-wrap">
+            <button class="btn btn-brand" type="button" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
+            <a class="btn btn-ghost" href="https://beta.regrely.com/" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
