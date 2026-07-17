@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/industries.html?raw";
+import headHtml from "../partials/industries.head.html?raw";
+const title = "Privacy Compliance by Industry | RegRely";
+const description = "Explore RegRely industry workflows for SaaS, Healthtech, Fintech, Ecommerce, Insurtech, Edtech, Logistics, and HR privacy and risk programs.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

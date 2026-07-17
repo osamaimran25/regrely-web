@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/industries__ecommerce.html?raw";
+import headHtml from "../../partials/industries__ecommerce.head.html?raw";
+const title = "RegRely for Ecommerce | Industry Workflow";
+const description = "Ecommerce privacy operations with consent tracking, DSAR workflows, and risk governance in RegRely.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/ecommerce/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

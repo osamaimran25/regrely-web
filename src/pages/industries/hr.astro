@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/industries__hr.html?raw";
+import headHtml from "../../partials/industries__hr.head.html?raw";
+const title = "RegRely for HR | Industry Workflow";
+const description = "HR privacy and risk workflows for employee data governance, DSAR operations, and audit-ready compliance evidence.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/hr/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

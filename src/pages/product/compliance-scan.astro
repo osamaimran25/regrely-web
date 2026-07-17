@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/product__compliance-scan.html?raw";
+import headHtml from "../../partials/product__compliance-scan.head.html?raw";
+const title = "RegRely Compliance Scan | Product Module";
+const description = "Run compliance scans, track findings, and manage remediation with full evidence traceability in RegRely.";
+---
+
+<BaseLayout title={title} description={description} path="/product/compliance-scan/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

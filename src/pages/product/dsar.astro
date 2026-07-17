@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/product__dsar.html?raw";
+import headHtml from "../../partials/product__dsar.head.html?raw";
+const title = "RegRely DSAR Automation | Product Module";
+const description = "Automate DSAR intake, workflows, approvals, and evidence-ready responses with RegRely DSAR automation.";
+---
+
+<BaseLayout title={title} description={description} path="/product/dsar/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

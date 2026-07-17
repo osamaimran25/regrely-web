@@ -1,0 +1,48 @@
+---
+// Shared "Request a demo" modal. Triggered by any [data-bs-target="#demoModal"].
+---
+<div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5" id="demoModalLabel">Request a RegRely Demo</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="demoForm" novalidate>
+          <div class="mb-3">
+            <label for="demoName" class="form-label">Name</label>
+            <input id="demoName" class="form-control" name="name" required />
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="mb-3">
+            <label for="demoEmail" class="form-label">Work email</label>
+            <input id="demoEmail" class="form-control" type="email" name="email" required />
+            <div class="invalid-feedback">Please enter a valid work email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="demoCompany" class="form-label">Company</label>
+            <input id="demoCompany" class="form-control" name="company" required />
+            <div class="invalid-feedback">Please enter your company.</div>
+          </div>
+          <div class="mb-3">
+            <label for="demoSize" class="form-label">Team size</label>
+            <select id="demoSize" class="form-select" name="team_size" required>
+              <option value="">Choose one...</option>
+              <option>1-50</option>
+              <option>51-200</option>
+              <option>201-1000</option>
+              <option>1000+</option>
+            </select>
+            <div class="invalid-feedback">Please select your team size.</div>
+          </div>
+          <p id="demoFormSuccess" class="alert alert-success d-none" role="status"></p>
+          <div class="d-flex flex-wrap gap-2">
+            <button type="submit" class="btn btn-brand">Submit Request</button>
+            <button type="button" class="btn btn-ghost" id="copyDemoTemplate">Copy Email Template</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

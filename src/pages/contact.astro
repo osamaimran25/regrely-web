@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/contact.html?raw";
+const title = "Contact RegRely | Get Your Free Compliance Check";
+const description = "Get a free compliance check from RegRely and receive a practical action plan for your business.";
+---
+
+<BaseLayout title={title} description={description} path="/contact/">
+  <Fragment set:html={html} />
+</BaseLayout>

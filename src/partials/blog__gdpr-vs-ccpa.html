@@ -1,0 +1,109 @@
+
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="small mb-3">
+          <a href="/../index/">Home</a> <span class="text-muted">/</span>
+          <a href="/">Blog</a> <span class="text-muted">/</span>
+          <span class="text-muted">Compliance Scan</span>
+        </nav>
+        <h1>GDPR vs CCPA: the differences that actually change what you build</h1>
+        <p class="text-muted mb-0">8 min read</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm answer-section">
+      <div class="container">
+        <div class="card-surface answer-block mb-4">
+          <p class="mb-0">GDPR requires a lawful basis for every act of processing personal data of people in the EU and EEA, making it opt-in by design. CCPA and CPRA apply to qualifying businesses handling California residents&#x27; data and centre on disclosure and the right to opt out of sale or sharing. GDPR restricts collection; CCPA restricts what you do afterwards.</p>
+        </div>
+        <article class="post-body">
+<p>Teams building for both markets usually try to find the stricter law and comply with that. It is a reasonable instinct and it is mostly right — but "mostly" is doing a lot of work in that sentence, because the two laws are strict about <em>different things</em>.</p>
+<h2>The one difference everything else follows from</h2>
+<p><strong>GDPR is opt-in. CCPA is opt-out.</strong></p>
+<p>Under GDPR you need a lawful basis <em>before</em> you process personal data at all. No basis, no processing. The default is that you may not.</p>
+<p>Under CCPA and CPRA you may generally collect and use personal information, provided you disclose it — and the consumer has the right to tell you to stop selling or sharing it. The default is that you may, until told otherwise.</p>
+<p>That single line explains most of what follows.</p>
+<h2>Scope: who is covered</h2>
+<p><strong>GDPR</strong> applies to any organisation processing the personal data of people in the EU or EEA, regardless of where the organisation is. There is no revenue threshold and no size threshold. If you offer goods or services to people in the EU, you are in scope.</p>
+<p><strong>CCPA/CPRA</strong> applies to for-profit businesses doing business in California that meet at least one threshold: over $25m annual gross revenue; buying, selling, or sharing the personal information of 100,000+ consumers or households; or deriving 50%+ of annual revenue from selling or sharing personal information.</p>
+<p>So a 15-person European startup is squarely inside GDPR and very likely outside CCPA.</p>
+<h2>Rights: similar names, different mechanics</h2>
+<p>Both give people the right to access, delete, and correct their data. The differences are in the edges:</p>
+<ul>
+<li><strong>Deadline.</strong> GDPR: one month, extendable by two. CCPA: 45 days, extendable to 45 more.</li>
+<li><strong>Opt-out of sale.</strong> CCPA has it; GDPR does not need it, because the sale would have needed a basis in the first place.</li>
+<li><strong>Objection to processing.</strong> GDPR has it; CCPA has no direct analogue.</li>
+<li><strong>Data portability.</strong> Both have it, but GDPR's is broader.</li>
+<li><strong>Automated decision-making.</strong> GDPR Article 22 restricts solely automated decisions with significant effects and grants a right to human review. CPRA introduces rights around automated decision-making technology, but the regimes are not equivalent.</li>
+</ul>
+<h2>"Sale" is broader than you think</h2>
+<p>This is the one that catches ecommerce and SaaS companies who were confident they were out of scope.</p>
+<p>Under CPRA, disclosing identifiers to an advertising network for <strong>cross-context behavioural advertising</strong> counts as a <em>sale or share</em> — even when no money changes hands. If you run a retargeting pixel, you are very likely sharing personal information under CPRA, and you owe consumers a way to opt out of it.</p>
+<p>Most companies running a standard marketing stack are doing this without having decided to.</p>
+<h2>What this means for what you build</h2>
+<p>Four things, concretely:</p>
+<p><strong>A basis field, not a consent flag.</strong> GDPR needs a lawful basis recorded per processing activity, and consent is only one of six. Systems that model this as a single boolean cannot represent reality — and cannot survive an audit.</p>
+<p><strong>A real opt-out path, plumbed downstream.</strong> CCPA's "Do Not Sell or Share My Personal Information" is not a UI element. It is a signal that must propagate to every ad platform and downstream processor, and you must be able to prove it did.</p>
+<p><strong>Deletion that actually deletes.</strong> Both laws require it, both have exemptions, and both expect you to know which of your systems hold the data — which brings you back to the <a href="/../product-ropa/">record of processing</a>.</p>
+<p><strong>Honest disclosure.</strong> CCPA is fundamentally a transparency regime. The categories of data collected, the purposes, and the recipients must be disclosed — accurately, and matching what you actually do.</p>
+<h2>The practical answer</h2>
+<p>Build to GDPR, then add CCPA's opt-out mechanics on top. GDPR's requirement for a lawful basis, a record of processing, and demonstrable accountability is the higher structural bar — but it does not, by itself, give you the "Do Not Sell or Share" signal handling that CPRA demands.</p>
+<p>Neither law is satisfied by a policy document. Both are satisfied by a system that can show what you did and why — which is what a <a href="/../product-compliance-scan/">compliance scan and findings process</a> exists to produce.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+      <h2 class="mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="gdprvsccpaFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gdprvsccpaFaq0" aria-expanded="true">Does GDPR apply to a US company?</button></h3>
+          <div id="gdprvsccpaFaq0" class="accordion-collapse collapse show" data-bs-parent="#gdprvsccpaFaq"><div class="accordion-body">Yes, if it offers goods or services to people in the EU or EEA, or monitors their behaviour. The location of the company is irrelevant — the test is the location of the data subject and the nature of the processing.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gdprvsccpaFaq1" aria-expanded="false">Is CCPA compliance automatic if we comply with GDPR?</button></h3>
+          <div id="gdprvsccpaFaq1" class="accordion-collapse collapse" data-bs-parent="#gdprvsccpaFaq"><div class="accordion-body">No. GDPR is the higher structural bar, but it does not include CCPA&#x27;s specific mechanics — notably the &#x27;Do Not Sell or Share My Personal Information&#x27; opt-out and its disclosure requirements. Most GDPR-compliant companies still have CCPA work to do.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gdprvsccpaFaq2" aria-expanded="false">What are the penalties under each law?</button></h3>
+          <div id="gdprvsccpaFaq2" class="accordion-collapse collapse" data-bs-parent="#gdprvsccpaFaq"><div class="accordion-body">GDPR fines reach up to €20 million or 4% of global annual turnover, whichever is higher. CCPA/CPRA penalties are assessed per violation, with a higher tier for violations involving minors, and there is a limited private right of action for certain data breaches.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gdprvsccpaFaq3" aria-expanded="false">Does running retargeting ads count as selling data?</button></h3>
+          <div id="gdprvsccpaFaq3" class="accordion-collapse collapse" data-bs-parent="#gdprvsccpaFaq"><div class="accordion-body">Under CPRA, disclosing identifiers to an advertising network for cross-context behavioural advertising is treated as a sale or share, even with no money changing hands. Most companies running standard retargeting pixels are in scope and owe consumers an opt-out.</div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2>Compliance Scan</h2>
+          <p class="text-muted">See how RegRely turns this into a repeatable, evidenced workflow.</p>
+          <a class="btn btn-brand" href="/../product-compliance-scan/">Explore Compliance Scan</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="h4 mb-3">Keep reading</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="/how-to-respond-to-a-dsar/">
+              <h3 class="h6 mb-2">How to respond to a DSAR: a step-by-step process</h3>
+              <p class="small text-muted mb-0">The deadline starts the moment it arrives, not the moment you notice it. Here is the process, step by step.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="/what-is-a-ropa/">
+              <h3 class="h6 mb-2">What is a ROPA, and does your company need one?</h3>
+              <p class="small text-muted mb-0">Most companies think the 250-employee threshold exempts them. It almost never does.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  

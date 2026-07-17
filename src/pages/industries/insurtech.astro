@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/industries__insurtech.html?raw";
+import headHtml from "../../partials/industries__insurtech.head.html?raw";
+const title = "RegRely for Insurtech | Industry Workflow";
+const description = "Insurtech privacy and risk workflows for policyholder data, claims operations, and audit-ready governance.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/insurtech/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

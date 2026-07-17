@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/industries__fintech.html?raw";
+import headHtml from "../../partials/industries__fintech.head.html?raw";
+const title = "RegRely for Fintech | Industry Workflow";
+const description = "Run fintech compliance scans, findings management, and risk register workflows with RegRely.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/fintech/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

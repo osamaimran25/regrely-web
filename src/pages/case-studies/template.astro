@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/case-studies__template.html?raw";
+const title = "RegRely Case Study Template";
+const description = "Reusable case study template for documenting privacy and risk outcomes with RegRely.";
+---
+
+<BaseLayout title={title} description={description} path="/case-studies/template/">
+  <Fragment set:html={html} />
+</BaseLayout>

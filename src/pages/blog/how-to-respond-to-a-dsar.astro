@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/blog__how-to-respond-to-a-dsar.html?raw";
+import headHtml from "../../partials/blog__how-to-respond-to-a-dsar.head.html?raw";
+const title = "How to Respond to a DSAR — Step-by-Step Guide | RegRely";
+const description = "A practical, step-by-step process for handling a data subject access request under GDPR — deadlines, identity verification, search, redaction, and the evidence you must keep.";
+---
+
+<BaseLayout title={title} description={description} path="/blog/how-to-respond-to-a-dsar/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

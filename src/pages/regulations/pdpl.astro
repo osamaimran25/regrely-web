@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/regulations__pdpl.html?raw";
+import headHtml from "../../partials/regulations__pdpl.head.html?raw";
+const title = "UAE PDPL Compliance Requirements Explained | RegRely";
+const description = "What the UAE Personal Data Protection Law requires — lawful bases, data subject rights, breach notification, cross-border transfers, and how it compares to GDPR.";
+---
+
+<BaseLayout title={title} description={description} path="/regulations/pdpl/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/blog__when-is-a-dpia-required.html?raw";
+import headHtml from "../../partials/blog__when-is-a-dpia-required.head.html?raw";
+const title = "When Is a DPIA Required? GDPR Article 35 | RegRely";
+const description = "The criteria that trigger a data protection impact assessment under GDPR Article 35, what a DPIA must contain, and what to do when the residual risk stays high.";
+---
+
+<BaseLayout title={title} description={description} path="/blog/when-is-a-dpia-required/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

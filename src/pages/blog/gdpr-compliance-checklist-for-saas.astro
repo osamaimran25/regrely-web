@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/blog__gdpr-compliance-checklist-for-saas.html?raw";
+import headHtml from "../../partials/blog__gdpr-compliance-checklist-for-saas.head.html?raw";
+const title = "GDPR Compliance Checklist for SaaS Companies | RegRely";
+const description = "A practical GDPR checklist for SaaS companies — controller vs processor, DPAs, subprocessors, DSARs, retention, transfers, and what enterprise security reviews actually ask for.";
+---
+
+<BaseLayout title={title} description={description} path="/blog/gdpr-compliance-checklist-for-saas/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

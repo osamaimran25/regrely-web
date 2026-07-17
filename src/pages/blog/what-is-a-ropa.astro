@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/blog__what-is-a-ropa.html?raw";
+import headHtml from "../../partials/blog__what-is-a-ropa.head.html?raw";
+const title = "What Is a ROPA? GDPR Article 30 Explained | RegRely";
+const description = "What a record of processing activities is, who GDPR Article 30 actually requires to keep one, what it must contain, and why spreadsheets fail at it.";
+---
+
+<BaseLayout title={title} description={description} path="/blog/what-is-a-ropa/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

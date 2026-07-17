@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/product__consent.html?raw";
+import headHtml from "../../partials/product__consent.head.html?raw";
+const title = "RegRely Consent Tracking | Product Module";
+const description = "Manage consent status, policy versions, and revocation workflows with RegRely consent tracking.";
+---
+
+<BaseLayout title={title} description={description} path="/product/consent/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

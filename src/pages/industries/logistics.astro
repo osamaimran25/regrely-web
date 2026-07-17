@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/industries__logistics.html?raw";
+import headHtml from "../../partials/industries__logistics.head.html?raw";
+const title = "RegRely for Logistics | Industry Workflow";
+const description = "Logistics privacy and risk workflows for shipment data, workforce records, and global vendor ecosystems.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/logistics/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

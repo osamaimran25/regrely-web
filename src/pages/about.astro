@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/about.html?raw";
+const title = "About RegRely | Built for Mid-Market Compliance Teams";
+const description = "RegRely was built to give mid-market companies enterprise-grade privacy compliance without enterprise pricing or long rollouts.";
+---
+
+<BaseLayout title={title} description={description} path="/about/">
+  <Fragment set:html={html} />
+</BaseLayout>

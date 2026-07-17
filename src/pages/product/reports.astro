@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/product__reports.html?raw";
+import headHtml from "../../partials/product__reports.head.html?raw";
+const title = "RegRely Reports | Product Module";
+const description = "Create executive dashboards and audit-ready exports with RegRely reporting workflows.";
+---
+
+<BaseLayout title={title} description={description} path="/product/reports/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/index.html?raw";
+import headHtml from "../partials/index.head.html?raw";
+const title = "GDPR Compliance Automation Software | RegRely";
+const description = "RegRely automates GDPR compliance for growing companies — DSAR automation, ROPA mapping, consent tracking, and audit-ready reports. No compliance team needed. From $99/month.";
+---
+
+<BaseLayout title={title} description={description} path="/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

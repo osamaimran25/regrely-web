@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/security.html?raw";
+const title = "RegRely Security | Tenant Isolation, RBAC, Audit Trails";
+const description = "Learn how RegRely secures privacy and risk operations with tenant isolation, encryption, RBAC, backups, and incident response.";
+---
+
+<BaseLayout title={title} description={description} path="/security/">
+  <Fragment set:html={html} />
+</BaseLayout>

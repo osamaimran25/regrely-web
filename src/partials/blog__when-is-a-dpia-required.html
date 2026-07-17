@@ -1,0 +1,119 @@
+
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="small mb-3">
+          <a href="/../index/">Home</a> <span class="text-muted">/</span>
+          <a href="/">Blog</a> <span class="text-muted">/</span>
+          <span class="text-muted">Risk Register</span>
+        </nav>
+        <h1>When is a DPIA required, and what goes in one?</h1>
+        <p class="text-muted mb-0">7 min read</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm answer-section">
+      <div class="container">
+        <div class="card-surface answer-block mb-4">
+          <p class="mb-0">A DPIA is required under GDPR Article 35 when processing is likely to result in a high risk to individuals — in particular for systematic and extensive automated evaluation or profiling, large-scale processing of special-category data, or large-scale systematic monitoring of a publicly accessible area. Regulators treat meeting two of nine criteria as the working threshold.</p>
+        </div>
+        <article class="post-body">
+<p>A data protection impact assessment is not paperwork you produce after the fact to justify a decision already made. It is a design-stage exercise, and its whole value lies in being done early enough that the answer can still change what you build.</p>
+<p>Done late, it is a formality. Done on time, it occasionally kills a feature — which is the point.</p>
+<h2>When it is mandatory</h2>
+<p>Article 35 requires a DPIA where processing is <strong>likely to result in a high risk</strong> to the rights and freedoms of individuals, and specifically calls out three cases:</p>
+<ul>
+<li><strong>Systematic and extensive evaluation</strong> based on automated processing, including profiling, on which decisions with legal or similarly significant effects are based</li>
+<li><strong>Large-scale processing of special-category data</strong> or criminal-conviction data</li>
+<li><strong>Large-scale systematic monitoring of a publicly accessible area</strong></li>
+</ul>
+<p>Because "high risk" is vague, regulators published nine criteria. The working rule most supervisory authorities apply: <strong>if processing meets two or more, do a DPIA.</strong></p>
+<ol>
+<li>Evaluation or scoring, including profiling and prediction</li>
+<li>Automated decision-making with legal or similar significant effect</li>
+<li>Systematic monitoring</li>
+<li>Sensitive data or data of a highly personal nature</li>
+<li>Data processed on a large scale</li>
+<li>Matching or combining datasets</li>
+<li>Data concerning vulnerable data subjects (children, employees, patients)</li>
+<li>Innovative use or applying new technological or organisational solutions</li>
+<li>Processing that prevents data subjects from exercising a right or using a service</li>
+</ol>
+<p>Read criterion 8 carefully. <strong>"Innovative use of new technology"</strong> is exactly where most AI features land — and criterion 1 catches scoring and prediction. A new AI feature that scores users is two criteria on its own.</p>
+<h2>What has to be in it</h2>
+<p>Article 35(7) sets the minimum:</p>
+<ul>
+<li>a <strong>systematic description</strong> of the processing, its purposes, and the legitimate interest pursued</li>
+<li>an assessment of the <strong>necessity and proportionality</strong> of the processing relative to the purpose</li>
+<li>an assessment of the <strong>risks to the rights and freedoms</strong> of data subjects</li>
+<li>the <strong>measures envisaged to address those risks</strong> — safeguards, security measures, and mechanisms to demonstrate compliance</li>
+</ul>
+<p>The second one is the one teams skip, and it is the one that does the work. <em>Necessity and proportionality</em> asks: could you achieve the same purpose with less data, less intrusion, or a shorter retention? If the answer is yes and you did not, the DPIA has just told you the processing is unlawful — and writing it down anyway is worse than not having asked.</p>
+<h2>What happens if the risk stays high</h2>
+<p>This is the part almost nobody knows.</p>
+<p>If, after all your mitigations, the <strong>residual risk is still high</strong>, Article 36 requires you to <strong>consult the supervisory authority before you start processing</strong>. Not notify. Consult — and wait.</p>
+<p>The regulator has up to eight weeks to respond, extendable by six. Which means that for a feature in this category, prior consultation is not a compliance formality; it is a <strong>release blocker with a multi-month lead time</strong>, and it needs to be on the roadmap rather than discovered a fortnight before launch.</p>
+<p>The correct response to a high residual risk is usually to change the design until the risk is no longer high.</p>
+<h2>Making it survivable</h2>
+<p>Three things separate a DPIA process that works from one that becomes theatre:</p>
+<p><strong>Trigger it from the product process, not the compliance calendar.</strong> A DPIA should be raised when a feature is specified, not when someone remembers. If it is not in the definition-of-ready, it will be done retrospectively and be worthless.</p>
+<p><strong>Connect it to the <a href="/../product-risk-register/">risk register</a>.</strong> The risks a DPIA surfaces do not vanish when the document is signed. They become live risks with owners, mitigations, and residual ratings that someone has to accept.</p>
+<p><strong>Write down what you decided not to do.</strong> The rejected, more intrusive design is evidence of proportionality — and it is the single most useful thing to have when a regulator asks why you built it this way.</p>
+<p>Skipping a required DPIA is itself an infringement, and it is easy for a regulator to prove: the feature exists, the assessment does not.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+      <h2 class="mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="whenisadpiarequiredFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq0" aria-expanded="true">Who should carry out a DPIA?</button></h3>
+          <div id="whenisadpiarequiredFaq0" class="accordion-collapse collapse show" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">The controller is responsible, and must seek the advice of the DPO where one is appointed. In practice it is completed by the product or system owner with privacy input — the person who knows what the system actually does — rather than written by compliance in isolation.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq1" aria-expanded="false">Do we need a DPIA for every new feature?</button></h3>
+          <div id="whenisadpiarequiredFaq1" class="accordion-collapse collapse" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">No. Only where processing is likely to result in a high risk. The working test used by most supervisory authorities is whether the processing meets two or more of the nine criteria — profiling, automated decisions, monitoring, sensitive data, large scale, data matching, vulnerable subjects, innovative technology, or blocking a right.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq2" aria-expanded="false">What if the DPIA shows high residual risk?</button></h3>
+          <div id="whenisadpiarequiredFaq2" class="accordion-collapse collapse" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">Article 36 requires you to consult the supervisory authority before starting the processing, and to wait for its response — up to eight weeks, extendable by six. In most cases the better answer is to redesign the processing until the residual risk is no longer high.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#whenisadpiarequiredFaq3" aria-expanded="false">Is a DPIA required for AI features?</button></h3>
+          <div id="whenisadpiarequiredFaq3" class="accordion-collapse collapse" data-bs-parent="#whenisadpiarequiredFaq"><div class="accordion-body">Frequently, yes. AI features often meet criterion 8 (innovative use of new technology) and criterion 1 (evaluation or scoring) simultaneously — which is two of the nine, and therefore the working threshold for a mandatory DPIA.</div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2>Risk Register</h2>
+          <p class="text-muted">See how RegRely turns this into a repeatable, evidenced workflow.</p>
+          <a class="btn btn-brand" href="/../product-risk-register/">Explore Risk Register</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="h4 mb-3">Keep reading</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="/how-to-respond-to-a-dsar/">
+              <h3 class="h6 mb-2">How to respond to a DSAR: a step-by-step process</h3>
+              <p class="small text-muted mb-0">The deadline starts the moment it arrives, not the moment you notice it. Here is the process, step by step.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="/what-is-a-ropa/">
+              <h3 class="h6 mb-2">What is a ROPA, and does your company need one?</h3>
+              <p class="small text-muted mb-0">Most companies think the 250-employee threshold exempts them. It almost never does.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  

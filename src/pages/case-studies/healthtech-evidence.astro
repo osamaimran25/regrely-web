@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/case-studies__healthtech-evidence.html?raw";
+import headHtml from "../../partials/case-studies__healthtech-evidence.head.html?raw";
+const title = "Illustrative Healthtech Case Study | RegRely";
+const description = "Illustrative healthtech case study showing audit readiness and remediation cycle improvements with RegRely compliance and risk workflows.";
+---
+
+<BaseLayout title={title} description={description} path="/case-studies/healthtech-evidence/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

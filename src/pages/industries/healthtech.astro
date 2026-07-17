@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/industries__healthtech.html?raw";
+import headHtml from "../../partials/industries__healthtech.head.html?raw";
+const title = "RegRely for Healthtech | Industry Workflow";
+const description = "Healthtech privacy and risk workflows with HIPAA-aware controls, DSAR operations, and audit-ready exports.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/healthtech/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

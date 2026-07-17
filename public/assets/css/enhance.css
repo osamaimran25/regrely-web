@@ -1,0 +1,138 @@
+/* ============================================================
+   RegRely — premium enhancement layer (loaded after styles.css)
+   Elevates the existing brand system (OneTrust/Vanta-grade finish)
+   without changing markup meaning. Refines: rhythm, depth, hero,
+   cards, buttons, nav, section headings, motion.
+   ============================================================ */
+
+:root {
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ring: 0 0 0 4px color-mix(in srgb, var(--primary) 22%, transparent);
+  --elev-1: 0 1px 2px rgba(13, 34, 64, 0.06), 0 6px 16px rgba(13, 34, 64, 0.06);
+  --elev-2: 0 2px 6px rgba(13, 34, 64, 0.08), 0 18px 40px rgba(13, 34, 64, 0.10);
+  --grad-brand: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 55%, #7db4ff));
+  --section-gap: clamp(4rem, 8vw, 7rem);
+}
+:root[data-theme="dark"] {
+  --elev-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 18px rgba(0, 0, 0, 0.35);
+  --elev-2: 0 2px 8px rgba(0, 0, 0, 0.45), 0 22px 48px rgba(0, 0, 0, 0.5);
+}
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; letter-spacing: -0.011em; }
+
+/* ---- Vertical rhythm ---- */
+.section-pad { padding-block: var(--section-gap); }
+.section-pad-sm { padding-block: clamp(2.5rem, 5vw, 4rem); }
+
+/* ---- Type scale: tighter, more editorial headings ---- */
+h1, .hero h1 { letter-spacing: -0.03em; line-height: 1.05; }
+h2 { letter-spacing: -0.022em; line-height: 1.12; }
+.lead, .hero p { line-height: 1.6; }
+
+/* ---- Eyebrow / section kicker ---- */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--primary);
+}
+.eyebrow::before { content: ""; width: 1.5rem; height: 2px; border-radius: 2px; background: var(--grad-brand); }
+
+/* ---- Glass nav: deeper blur + hairline + shadow on scroll ---- */
+.glass-nav {
+  background: color-mix(in srgb, var(--card) 72%, transparent);
+  backdrop-filter: saturate(1.4) blur(16px);
+  -webkit-backdrop-filter: saturate(1.4) blur(16px);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  transition: box-shadow 0.3s var(--ease), background 0.3s var(--ease);
+}
+.glass-nav.is-scrolled { box-shadow: var(--elev-1); background: color-mix(in srgb, var(--card) 88%, transparent); }
+.nav-link { position: relative; font-weight: 500; transition: color 0.2s var(--ease); }
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: ""; position: absolute; left: 0.75rem; right: 0.75rem; bottom: -2px; height: 2px;
+  border-radius: 2px; background: var(--grad-brand);
+}
+.dropdown-menu { border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--elev-2); padding: 0.4rem; overflow: hidden; }
+.dropdown-item { border-radius: 9px; transition: background 0.15s var(--ease); }
+
+/* ---- Buttons: refined depth + spring hover ---- */
+.btn { border-radius: 12px; font-weight: 600; transition: transform 0.18s var(--ease), box-shadow 0.25s var(--ease), background 0.2s var(--ease); }
+.btn-brand { background: var(--grad-brand); border: none; box-shadow: 0 8px 22px color-mix(in srgb, var(--primary) 32%, transparent); }
+.btn-brand:hover, .btn-brand:focus-visible { transform: translateY(-2px); box-shadow: 0 12px 30px color-mix(in srgb, var(--primary) 42%, transparent); }
+.btn-brand:active { transform: translateY(0); }
+.btn-ghost { border: 1px solid var(--border); background: color-mix(in srgb, var(--card) 60%, transparent); backdrop-filter: blur(6px); }
+.btn-ghost:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--primary) 50%, var(--border)); }
+:focus-visible { outline: none; box-shadow: var(--ring); border-radius: 8px; }
+
+/* ---- Hero: soft aurora background ---- */
+.hero, .page-hero { position: relative; isolation: isolate; }
+.hero::before, .page-hero::before {
+  content: ""; position: absolute; inset: -20% -10% auto -10%; height: 120%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(42rem 30rem at 15% -10%, color-mix(in srgb, var(--primary) 16%, transparent), transparent 60%),
+    radial-gradient(38rem 26rem at 90% 0%, color-mix(in srgb, #7db4ff 14%, transparent), transparent 55%);
+  filter: blur(4px);
+}
+.hero-card, .card-surface, .hero .screenshot { box-shadow: var(--elev-2); border-radius: 18px; }
+
+/* ---- Cards: unify radius, hairline border, lift on hover ---- */
+.card-surface, .feature-card, .pricing-card, .industry-card, .testimonial, .metric-item, .teaser {
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  box-shadow: var(--elev-1);
+  transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-color 0.28s var(--ease);
+}
+.feature-card:hover, .industry-card:hover, .pricing-card:hover, .teaser:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--elev-2);
+  border-color: color-mix(in srgb, var(--primary) 32%, var(--border));
+}
+.module-icon { border-radius: 14px; }
+
+/* ---- Module/feature icon accent ---- */
+.feature-card .module-icon, .card-surface .module-icon {
+  background: color-mix(in srgb, var(--primary) 12%, var(--card));
+  color: var(--primary);
+}
+
+/* ---- Trust / logo strip ---- */
+.logo-strip { opacity: 0.85; }
+.logo-chip { border-radius: 12px; border: 1px solid color-mix(in srgb, var(--border) 70%, transparent); transition: opacity 0.2s var(--ease), transform 0.2s var(--ease); }
+.logo-chip:hover { transform: translateY(-2px); }
+
+/* ---- Pricing highlight ---- */
+.pricing-card--discount, .pricing-card.is-featured {
+  border-color: color-mix(in srgb, var(--primary) 45%, var(--border));
+  box-shadow: 0 20px 50px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+.price-current { letter-spacing: -0.03em; }
+
+/* ---- Final CTA panel: brand gradient slab ---- */
+.final-cta {
+  background: var(--grad-brand);
+  border-radius: 26px;
+  color: #fff;
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+.final-cta h2, .final-cta p, .final-cta .eyebrow { color: #fff; }
+.final-cta .eyebrow::before { background: rgba(255, 255, 255, 0.8); }
+.final-cta .btn-brand { background: #fff; color: var(--primary); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18); }
+.final-cta .btn-ghost { border-color: rgba(255, 255, 255, 0.55); color: #fff; background: transparent; }
+
+/* ---- Reveal-on-scroll motion ---- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+  .btn, .feature-card, .industry-card, .pricing-card { transition: none; }
+}
+
+/* ---- Footer polish ---- */
+.footer { border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent); }
+.footer-title { letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.75rem; color: var(--muted); }
+.footer-links a, .footer a { transition: color 0.15s var(--ease); }
+
+/* ---- Selection ---- */
+::selection { background: color-mix(in srgb, var(--primary) 24%, transparent); }

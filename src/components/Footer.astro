@@ -1,0 +1,56 @@
+---
+import { SITE, FOOTER } from "../data/site.js";
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-shell">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/">
+            <img src="/assets/img/logo-regrely.svg" alt="RegRely" class="brand-logo-footer" width="176" height="38" />
+          </a>
+          <p class="footer-copy mt-3 mb-0">
+            Privacy and risk operations platform built for audit readiness, faster response cycles, and clean tenant
+            separation.
+          </p>
+          <div class="footer-contact-card mt-3">
+            <p class="mb-1">Talk to the RegRely team</p>
+            <a class="footer-email" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            <a
+              class="footer-social-link"
+              href={SITE.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="RegRely on LinkedIn"
+            >
+              <img src="/assets/img/linkedin.svg" alt="LinkedIn" width="20" height="20" />
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        {
+          FOOTER.columns.map((col) => (
+            <div class="col-6 col-lg-2">
+              <h3 class="h6 footer-title">{col.title}</h3>
+              {col.links.map((link) => (
+                <>
+                  <a href={link.href}>{link.label}</a>
+                  <br />
+                </>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="text-muted small mb-0">© {year} RegRely. All rights reserved.</p>
+        <div class="d-flex flex-wrap gap-3 small">
+          {FOOTER.bottomLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

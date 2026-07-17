@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/404.html?raw";
+const title = "404 | RegRely";
+const description = "The page you requested could not be found. Return to RegRely home, product overview, or contact page.";
+---
+
+<BaseLayout title={title} description={description} path="/404" noindex={true}>
+  <Fragment set:html={html} />
+</BaseLayout>

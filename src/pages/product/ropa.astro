@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/product__ropa.html?raw";
+import headHtml from "../../partials/product__ropa.head.html?raw";
+const title = "RegRely ROPA Mapping | Product Module";
+const description = "Maintain live records of processing activity with legal basis and control mapping in RegRely.";
+---
+
+<BaseLayout title={title} description={description} path="/product/ropa/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

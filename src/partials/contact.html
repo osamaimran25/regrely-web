@@ -1,0 +1,75 @@
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge badge-soft rounded-pill mb-3">Free Compliance Check</span>
+        <h1>Tell us where you are stuck. We will show your fastest path forward.</h1>
+        <p>Share your current setup and we will send a practical action plan to help you become audit-ready quickly.</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="card-surface p-4">
+              <h2 class="h4 mb-3">Request your free compliance check</h2>
+              <form id="contactForm" novalidate>
+                <div class="mb-3">
+                  <label class="form-label" for="contactName">Name</label>
+                  <input class="form-control" id="contactName" name="name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="contactEmail">Email</label>
+                  <input class="form-control" id="contactEmail" name="email" type="email" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="contactCompany">Company</label>
+                  <input class="form-control" id="contactCompany" name="company" required>
+                  <div class="invalid-feedback">Please enter your company name.</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="contactMessage">What do you need help with?</label>
+                  <textarea class="form-control" id="contactMessage" name="message" rows="4" required></textarea>
+                  <div class="invalid-feedback">Please include a short message.</div>
+                </div>
+
+                <p id="contactSuccess" class="alert alert-success d-none" role="status"></p>
+
+                <button class="btn btn-brand" type="submit">Get My Free Compliance Check</button>
+                <!-- Optional integration: Formspree -->
+                <!--
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                  ...fields...
+                </form>
+                -->
+
+                <!-- Optional integration: Netlify Forms -->
+                <!--
+                <form name="contact" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact">
+                  ...fields...
+                </form>
+                -->
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="card-surface p-4 mb-3">
+              <h2 class="h5">Email</h2>
+              <p class="mb-0"><a href="mailto:info@regrely.com">info@regrely.com</a></p>
+            </div>
+            <div class="card-surface p-4">
+              <h2 class="h5">What to include for faster help</h2>
+              <ul class="mb-0">
+                <li>Where you sell (EU, UK, US, other)</li>
+                <li>Your biggest compliance blocker right now</li>
+                <li>Your target timeline for becoming audit-ready</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  

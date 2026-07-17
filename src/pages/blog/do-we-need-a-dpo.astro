@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/blog__do-we-need-a-dpo.html?raw";
+import headHtml from "../../partials/blog__do-we-need-a-dpo.head.html?raw";
+const title = "Do We Need a DPO? GDPR Requirements Explained | RegRely";
+const description = "When GDPR actually requires a Data Protection Officer, what the role must be able to do, and why appointing the wrong person creates a conflict of interest.";
+---
+
+<BaseLayout title={title} description={description} path="/blog/do-we-need-a-dpo/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

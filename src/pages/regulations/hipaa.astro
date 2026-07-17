@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/regulations__hipaa.html?raw";
+import headHtml from "../../partials/regulations__hipaa.head.html?raw";
+const title = "HIPAA Compliance Requirements for Software Vendors | RegRely";
+const description = "What HIPAA requires of covered entities and business associates, the Privacy, Security, and Breach Notification rules, and when you need a BAA.";
+---
+
+<BaseLayout title={title} description={description} path="/regulations/hipaa/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/case-studies.html?raw";
+import headHtml from "../partials/case-studies.head.html?raw";
+const title = "RegRely Case Studies | Privacy and Risk Outcomes";
+const description = "Read RegRely case studies showing measurable improvements in DSAR execution, compliance scans, and audit readiness.";
+---
+
+<BaseLayout title={title} description={description} path="/case-studies/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/industries__saas.html?raw";
+import headHtml from "../../partials/industries__saas.head.html?raw";
+const title = "RegRely for SaaS | Industry Workflow";
+const description = "See how SaaS teams use RegRely for DSAR automation, compliance scans, and risk register management.";
+---
+
+<BaseLayout title={title} description={description} path="/industries/saas/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

@@ -1,0 +1,114 @@
+
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="small mb-3">
+          <a href="/../index/">Home</a> <span class="text-muted">/</span>
+          <a href="/">Blog</a> <span class="text-muted">/</span>
+          <span class="text-muted">Compliance Scan</span>
+        </nav>
+        <h1>A GDPR compliance checklist for SaaS companies</h1>
+        <p class="text-muted mb-0">9 min read</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm answer-section">
+      <div class="container">
+        <div class="card-surface answer-block mb-4">
+          <p class="mb-0">A SaaS company&#x27;s GDPR obligations centre on being both a controller (for its own employee, prospect, and billing data) and a processor (for customer end-user data). The core requirements are a record of processing, a data processing agreement with every customer, a maintained subprocessor list, a DSAR process, defined retention, and lawful international transfers.</p>
+        </div>
+        <article class="post-body">
+<p>SaaS companies get audited long before a regulator ever contacts them. Every enterprise customer's own GDPR obligation flows down through a data processing agreement into a security review of <em>you</em> — which means your compliance posture is a sales asset or a sales blocker, and rarely anything in between.</p>
+<p>Here is what actually gets asked for.</p>
+<h2>1. Know which hat you are wearing</h2>
+<p>You are almost certainly <strong>both</strong>:</p>
+<ul>
+<li>a <strong>processor</strong> for the personal data your customers put into your product — you act on their instructions, and you do not decide what happens to it</li>
+<li>a <strong>controller</strong> for your own data — employees, candidates, prospects, billing contacts, website visitors, support requesters</li>
+</ul>
+<p>The obligations differ, and conflating them is the most common structural error in SaaS privacy. It shows up immediately in a security review, because a vendor who describes themselves purely as a processor cannot explain why they have a marketing database.</p>
+<h2>2. A record of processing that reflects reality</h2>
+<p>Both roles need one, with different contents (Article 30(1) for controllers, 30(2) for processors). Every other item on this list depends on it. Start here or expect to come back to it. <a href="/../product-ropa/">More on ROPAs</a>.</p>
+<h2>3. A DPA with every customer</h2>
+<p>Article 28 makes it mandatory: a data processing agreement between controller and processor, covering subject matter, duration, nature and purpose, types of data, categories of data subject, and the obligations of both parties.</p>
+<p>Have your own DPA ready to send. Vendors who make customers wait for one lose weeks in procurement.</p>
+<h2>4. A subprocessor list — public, current, and with notice</h2>
+<p>Every vendor that touches customer data is a subprocessor: your cloud provider, your email service, your support desk, your analytics tool, your error tracker.</p>
+<p>You need customer authorisation to use them, an obligation to notify before adding a new one, and a public list. This is the item most frequently found to be out of date — because subprocessors get added by engineering during a sprint, not by legal during a review.</p>
+<h2>5. A DSAR process that works for both roles</h2>
+<p>As a <strong>controller</strong>, you fulfil requests directly. As a <strong>processor</strong>, you must assist your customer in fulfilling requests they receive — which means having a way for a customer to extract or delete a specific end-user's data, and doing it inside <em>their</em> deadline, not yours.</p>
+<p>Enterprise buyers ask about this. "Email support and we'll look into it" is not a satisfying answer to someone with a one-month statutory clock. <a href="/../product-dsar/">More on DSAR handling</a>.</p>
+<h2>6. Retention that is decided, not accidental</h2>
+<p>For every data type: how long, and why. The default of keeping everything forever because storage is cheap is not defensible, and "our database has no delete function" is an answer that ends a security review.</p>
+<p>Pay attention to logs, backups, and the data warehouse. Deletion that does not reach them is not deletion.</p>
+<h2>7. International transfers with a real mechanism</h2>
+<p>If personal data leaves the EEA — and if you use a US cloud provider, it does — you need a transfer mechanism: an adequacy decision, standard contractual clauses, or binding corporate rules. Since <em>Schrems II</em> you also need a transfer impact assessment for the destination country.</p>
+<p>Note that this cascades to your subprocessors. Their transfers are your problem.</p>
+<h2>8. Security measures you can evidence</h2>
+<p>Article 32 requires appropriate technical and organisational measures. In practice, enterprise reviews want: encryption in transit and at rest, access control and least privilege, logging and monitoring, tested backups, vulnerability management, and a documented incident response plan.</p>
+<p>The word that matters is <em>evidence</em>. Having the control is half of it; being able to show it was tested is the other half.</p>
+<h2>9. Breach detection and a 72-hour clock</h2>
+<p>A personal data breach must be reported to the supervisory authority within <strong>72 hours</strong> of becoming aware of it, where it poses a risk to individuals. As a processor, you must notify the controller <strong>without undue delay</strong> — and your DPA will specify how fast.</p>
+<p>Seventy-two hours is not much time to work out what happened. The plan has to exist before the incident, and it has to name people, not roles.</p>
+<h2>10. A privacy notice that matches what you do</h2>
+<p>The most common finding in any privacy audit is not a missing document. It is a document that describes a system nobody built — a notice claiming data is retained for 12 months in a company whose database has never deleted a row.</p>
+<p>Regulators treat an inaccurate privacy notice as evidence of a broader accountability failure, and they are right to.</p>
+<hr />
+<p>The pattern across all ten: <strong>the obligation is not to have policies. It is to be able to demonstrate what you actually do.</strong> That is what turns compliance from a document exercise into an operational one — and it is what a <a href="/../product-compliance-scan/">continuous compliance scan</a> is for.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+      <h2 class="mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="gdprcompliancechecklistforsaasFaq">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#gdprcompliancechecklistforsaasFaq0" aria-expanded="true">Is a SaaS company a controller or a processor?</button></h3>
+          <div id="gdprcompliancechecklistforsaasFaq0" class="accordion-collapse collapse show" data-bs-parent="#gdprcompliancechecklistforsaasFaq"><div class="accordion-body">Usually both. You are a processor for your customers&#x27; end-user data, acting on their instructions, and a controller for your own data — employees, prospects, billing contacts, and website visitors. The obligations differ, and conflating them is the most common structural error in SaaS privacy.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gdprcompliancechecklistforsaasFaq1" aria-expanded="false">Do we need a DPA with every customer?</button></h3>
+          <div id="gdprcompliancechecklistforsaasFaq1" class="accordion-collapse collapse" data-bs-parent="#gdprcompliancechecklistforsaasFaq"><div class="accordion-body">Yes. GDPR Article 28 requires a data processing agreement between controller and processor. In practice every enterprise customer will send you theirs or expect you to provide one, so having your own ready to send materially shortens procurement.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gdprcompliancechecklistforsaasFaq2" aria-expanded="false">What is a subprocessor, and do we need to list them?</button></h3>
+          <div id="gdprcompliancechecklistforsaasFaq2" class="accordion-collapse collapse" data-bs-parent="#gdprcompliancechecklistforsaasFaq"><div class="accordion-body">A subprocessor is any vendor that processes your customers&#x27; personal data on your behalf — your cloud provider, email service, support desk, or analytics tool. You need customer authorisation to use them, an obligation to give notice before adding new ones, and a current public list.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gdprcompliancechecklistforsaasFaq3" aria-expanded="false">What do enterprise security reviews actually ask for?</button></h3>
+          <div id="gdprcompliancechecklistforsaasFaq3" class="accordion-collapse collapse" data-bs-parent="#gdprcompliancechecklistforsaasFaq"><div class="accordion-body">A current subprocessor list, your DPA, a ROPA, your DSAR process, evidence of security control testing, your breach notification process, and your international transfer mechanism. Vendors who can produce these quickly clear reviews in days rather than weeks.</div></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2>Compliance Scan</h2>
+          <p class="text-muted">See how RegRely turns this into a repeatable, evidenced workflow.</p>
+          <a class="btn btn-brand" href="/../product-compliance-scan/">Explore Compliance Scan</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="h4 mb-3">Keep reading</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="/how-to-respond-to-a-dsar/">
+              <h3 class="h6 mb-2">How to respond to a DSAR: a step-by-step process</h3>
+              <p class="small text-muted mb-0">The deadline starts the moment it arrives, not the moment you notice it. Here is the process, step by step.</p>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a class="card-surface d-block h-100 text-decoration-none" href="/what-is-a-ropa/">
+              <h3 class="h6 mb-2">What is a ROPA, and does your company need one?</h3>
+              <p class="small text-muted mb-0">Most companies think the 250-employee threshold exempts them. It almost never does.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  

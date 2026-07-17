@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/product.html?raw";
+import headHtml from "../partials/product.head.html?raw";
+const title = "RegRely Product | Unified Privacy and Risk Platform";
+const description = "Explore RegRely modules for DSAR, ROPA, consent, compliance scan, reports, risk register, data inventory, vendor, policy, controls, audit, and admin workflows.";
+---
+
+<BaseLayout title={title} description={description} path="/product/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

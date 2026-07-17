@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/privacy.html?raw";
+const title = "RegRely Privacy Notice";
+const description = "Read the RegRely privacy notice covering personal data collection, processing purposes, retention, security, and rights requests.";
+---
+
+<BaseLayout title={title} description={description} path="/privacy/">
+  <Fragment set:html={html} />
+</BaseLayout>

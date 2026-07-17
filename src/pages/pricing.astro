@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/pricing.html?raw";
+const title = "RegRely Pricing | Starter, Growth, Professional, Enterprise";
+const description = "Transparent compliance pricing for SMEs. GDPR, CCPA, HIPAA, and PDPL automation starting at $99/month. No enterprise lock-in. 14-day free trial.";
+---
+
+<BaseLayout title={title} description={description} path="/pricing/">
+  <Fragment set:html={html} />
+</BaseLayout>

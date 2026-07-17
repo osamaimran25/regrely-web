@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/product__risk-register.html?raw";
+import headHtml from "../../partials/product__risk-register.head.html?raw";
+const title = "RegRely Risk Register | Product Module";
+const description = "Manage risk scoring, mitigation ownership, and residual risk acceptance in RegRely.";
+---
+
+<BaseLayout title={title} description={description} path="/product/risk-register/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

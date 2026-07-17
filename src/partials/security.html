@@ -1,0 +1,77 @@
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="badge badge-soft rounded-pill mb-3">Security</span>
+        <h1>Security-first architecture for regulated operations</h1>
+        <p>RegRely is designed for high-trust environments with tenant isolation, encryption, role-based access control, and tamper-evident audit logs.</p>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4"><div class="card-surface feature-card"><h2 class="h5">Tenant isolation</h2><p class="text-muted mb-0">Logical data separation and scoped access boundaries per workspace.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-surface feature-card"><h2 class="h5">Encryption</h2><p class="text-muted mb-0">Encryption in transit and at rest with key management controls.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-surface feature-card"><h2 class="h5">RBAC</h2><p class="text-muted mb-0">Granular permissions by role, function, and approval responsibility.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-surface feature-card"><h2 class="h5">Audit logs</h2><p class="text-muted mb-0">Immutable event tracking for workflow actions and policy changes.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-surface feature-card"><h2 class="h5">Backups</h2><p class="text-muted mb-0">Routine backups with tested recovery paths and retention controls.</p></div></div>
+          <div class="col-md-6 col-lg-4"><div class="card-surface feature-card"><h2 class="h5">Incident response</h2><p class="text-muted mb-0">Defined escalation process, containment playbooks, and post-incident evidence handling.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface p-4 mb-3">
+          <h2 class="h4">Security contact</h2>
+          <p class="text-muted mb-2">For security questionnaires and trust documentation, contact:</p>
+          <p class="mb-0"><a href="mailto:security@regrely.com">security@regrely.com</a></p>
+        </div>
+
+        <div id="responsible-disclosure" class="card-surface p-4">
+          <h2 class="h4">Responsible disclosure</h2>
+          <p class="text-muted mb-0">If you identify a vulnerability, email details to <a href="mailto:security@regrely.com">security@regrely.com</a>. Please include reproduction steps and impact context. We will acknowledge receipt and coordinate remediation updates.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="section-pad-sm">
+      <div class="container">
+        <h2 class="mb-3">Frequently asked questions</h2>
+        <div class="accordion" id="securityFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#securityFaq0" aria-expanded="true">What security controls does a compliance platform need?</button></h3>
+            <div id="securityFaq0" class="accordion-collapse collapse show" data-bs-parent="#securityFaq"><div class="accordion-body">At minimum: tenant isolation so one customer&#x27;s data can never be reached from another, role-based access control, encryption in transit and at rest, immutable audit logging of who accessed what, and a documented incident response process. A compliance tool holding evidence about breaches is itself a high-value target.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#securityFaq1" aria-expanded="false">What is tenant isolation and why does it matter?</button></h3>
+            <div id="securityFaq1" class="accordion-collapse collapse" data-bs-parent="#securityFaq"><div class="accordion-body">Tenant isolation ensures each customer&#x27;s data is separated so that no request, query, or bug in one tenant can surface another tenant&#x27;s records. In a multi-tenant compliance platform it is the single most important control, because the data held is precisely the data a customer cannot afford to leak.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#securityFaq2" aria-expanded="false">What is the breach notification deadline under GDPR?</button></h3>
+            <div id="securityFaq2" class="accordion-collapse collapse" data-bs-parent="#securityFaq"><div class="accordion-body">A personal data breach must be reported to the supervisory authority within 72 hours of becoming aware of it, unless it is unlikely to result in a risk to individuals. If the risk to individuals is high, they must be told without undue delay as well.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#securityFaq3" aria-expanded="false">How does role-based access control support compliance?</button></h3>
+            <div id="securityFaq3" class="accordion-collapse collapse" data-bs-parent="#securityFaq"><div class="accordion-body">It enforces least privilege — people see only what their role requires — and it produces the access record an auditor asks for. Without it you cannot answer the two questions that always come up: who could see this data, and who actually did.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What security controls does a compliance platform need?", "acceptedAnswer": {"@type": "Answer", "text": "At minimum: tenant isolation so one customer's data can never be reached from another, role-based access control, encryption in transit and at rest, immutable audit logging of who accessed what, and a documented incident response process. A compliance tool holding evidence about breaches is itself a high-value target."}}, {"@type": "Question", "name": "What is tenant isolation and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "Tenant isolation ensures each customer's data is separated so that no request, query, or bug in one tenant can surface another tenant's records. In a multi-tenant compliance platform it is the single most important control, because the data held is precisely the data a customer cannot afford to leak."}}, {"@type": "Question", "name": "What is the breach notification deadline under GDPR?", "acceptedAnswer": {"@type": "Answer", "text": "A personal data breach must be reported to the supervisory authority within 72 hours of becoming aware of it, unless it is unlikely to result in a risk to individuals. If the risk to individuals is high, they must be told without undue delay as well."}}, {"@type": "Question", "name": "How does role-based access control support compliance?", "acceptedAnswer": {"@type": "Answer", "text": "It enforces least privilege — people see only what their role requires — and it produces the access record an auditor asks for. Without it you cannot answer the two questions that always come up: who could see this data, and who actually did."}}]}
+  </script>
+  
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="card-surface final-cta">
+          <h2 class="mb-2">See RegRely on your own compliance workload.</h2>
+          <p class="text-muted">Book a walkthrough, or start a free 14-day trial and try it against your own data.</p>
+          <div class="d-flex justify-content-center gap-2 flex-wrap">
+            <button class="btn btn-brand" type="button" data-bs-toggle="modal" data-bs-target="#demoModal">Book a Demo</button>
+            <a class="btn btn-ghost" href="https://beta.regrely.com/" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  

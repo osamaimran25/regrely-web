@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/terms.html?raw";
+const title = "RegRely Terms of Use";
+const description = "Read RegRely terms of use for website access, service usage expectations, billing terms, and legal responsibilities.";
+---
+
+<BaseLayout title={title} description={description} path="/terms/">
+  <Fragment set:html={html} />
+</BaseLayout>

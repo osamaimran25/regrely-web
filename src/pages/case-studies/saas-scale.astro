@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import html from "../../partials/case-studies__saas-scale.html?raw";
+import headHtml from "../../partials/case-studies__saas-scale.head.html?raw";
+const title = "Illustrative SaaS Case Study | RegRely";
+const description = "Illustrative SaaS case study showing DSAR speed and audit readiness improvements using RegRely privacy and risk workflows.";
+---
+
+<BaseLayout title={title} description={description} path="/case-studies/saas-scale/">
+  <Fragment slot="head" set:html={headHtml} />
+  <Fragment set:html={html} />
+</BaseLayout>

@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import html from "../partials/ai-demo.html?raw";
+const title = "RegRely AI Demo | Compliance Helper Mock";
+const description = "Try the RegRely AI Compliance Helper mock for DSAR checklists, scan steps, report flows, and risk assessments.";
+---
+
+<BaseLayout title={title} description={description} path="/ai-demo/">
+  <Fragment set:html={html} />
+</BaseLayout>
