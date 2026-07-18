@@ -136,3 +136,49 @@ h2 { letter-spacing: -0.022em; line-height: 1.12; }
 
 /* ---- Selection ---- */
 ::selection { background: color-mix(in srgb, var(--primary) 24%, transparent); }
+
+/* ============================================================
+   Inner-page hero + feature-card refinement
+   Kills the empty band under text-only .page-hero pages and gives
+   plain feature cards a premium accent. Applies site-wide.
+   ============================================================ */
+
+/* Tighten the hero -> content gap (was 3rem hero-bottom + 3rem section-top). */
+.page-hero { padding-block: clamp(6rem, 9vw, 7.5rem) clamp(1.25rem, 3vw, 2rem); }
+.page-hero > .container { max-width: 60rem; }
+.page-hero h1 { max-width: 20ch; }
+.page-hero p { max-width: 60ch; font-size: clamp(1.05rem, 1.6vw, 1.2rem); }
+.page-hero + section,
+.page-hero + .section-pad,
+.page-hero + .section-pad-sm { padding-top: clamp(1rem, 2.5vw, 2rem); }
+
+/* Sparse inner pages stack many short sections — collapse the doubled padding
+   between two consecutive small sections so they don't leave dead bands. */
+.section-pad-sm { padding-block: clamp(2rem, 4vw, 2.75rem); }
+.section-pad-sm + .section-pad-sm { padding-top: 0; }
+
+/* Stronger, intentional aurora on inner heroes so the space reads designed. */
+.page-hero::before {
+  inset: -30% -10% auto -10%; height: 150%;
+  background:
+    radial-gradient(46rem 30rem at 12% -20%, color-mix(in srgb, var(--primary) 20%, transparent), transparent 60%),
+    radial-gradient(40rem 26rem at 88% -10%, color-mix(in srgb, #7db4ff 16%, transparent), transparent 58%);
+}
+
+/* Premium feature cards: roomier, animated top accent bar, clearer hover. */
+.feature-card { position: relative; overflow: hidden; padding: 1.65rem 1.55rem; }
+.feature-card::after {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: var(--grad-brand); transform: scaleX(0); transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+.feature-card:hover::after { transform: scaleX(1); }
+.feature-card h2, .feature-card .h5, .feature-card h3 { letter-spacing: -0.01em; margin-bottom: 0.45rem; }
+
+/* Even grid rhythm for the card rows. */
+.section-pad-sm .row.g-3 { --bs-gutter-y: 1.25rem; }
+
+/* Security/trust FAQ + contact cards: unify with the elevated card system. */
+.accordion-item { border-radius: 14px !important; overflow: hidden; margin-bottom: 0.6rem; border: 1px solid color-mix(in srgb, var(--border) 80%, transparent) !important; }
+.accordion-button { font-weight: 600; }
+.accordion-button:not(.collapsed) { background: color-mix(in srgb, var(--primary) 8%, var(--card)); color: var(--primary); box-shadow: none; }
