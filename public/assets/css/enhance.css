@@ -197,3 +197,22 @@ h2 { letter-spacing: -0.022em; line-height: 1.12; }
 .accordion-item { border-radius: 14px !important; overflow: hidden; margin-bottom: 0.6rem; border: 1px solid color-mix(in srgb, var(--border) 80%, transparent) !important; }
 .accordion-button { font-weight: 600; }
 .accordion-button:not(.collapsed) { background: color-mix(in srgb, var(--primary) 8%, var(--card)); color: var(--primary); box-shadow: none; }
+
+/* ---- Nav CTA button: tight shadow (the big page-CTA glow read as a ghosted
+   duplicate in the compact navbar). ---- */
+.navbar .btn-brand {
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+.navbar .btn-brand:hover,
+.navbar .btn-brand:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+/* ---- Footer contact/social: no underline under the icon+text, clean align,
+   subtle brand-color hover instead. ---- */
+.footer-email:hover,
+.footer-social-link:hover,
+.footer-social-link:focus { text-decoration: none; color: var(--primary); }
+.footer-social-link { align-items: center; margin-top: 0.2rem; transition: color 0.15s var(--ease); }
+.footer-social-link img { display: block; flex: 0 0 auto; }
