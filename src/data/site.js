@@ -6,7 +6,7 @@ export const SITE = {
   url: "https://regrely.com",
   email: "info@regrely.com",
   linkedin: "https://www.linkedin.com/company/regrely",
-  appUrl: "https://beta.regrely.com/",
+  appUrl: "https://app.regrely.com/",
   description:
     "RegRely automates GDPR compliance for growing companies — DSAR automation, ROPA mapping, consent tracking, compliance scans, risk registers, and audit-ready reports. No compliance team needed.",
   ogImage: "/assets/img/og-default.jpg",

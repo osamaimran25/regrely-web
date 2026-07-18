@@ -60,4 +60,4 @@ immutable audit logging. See [security](https://regrely.com/security.html).
 ## Contact
 
 - [Contact RegRely](https://regrely.com/contact.html) — info@regrely.com
-- [Start a free trial](https://beta.regrely.com/)
+- [Start a free trial](https://app.regrely.com/)

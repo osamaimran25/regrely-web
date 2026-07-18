@@ -37,7 +37,7 @@
     var label = (link.textContent || "").trim().slice(0, 60);
 
     // The real conversion: leaving for the product to sign up.
-    if (href.indexOf("beta.regrely.com") !== -1) {
+    if (href.indexOf("app.regrely.com") !== -1) {
       track("trial_start", {
         link_text: label,
         plan: planFor(link),
