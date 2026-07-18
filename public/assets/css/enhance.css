@@ -48,6 +48,9 @@ h2 { letter-spacing: -0.022em; line-height: 1.12; }
 }
 .glass-nav.is-scrolled { box-shadow: var(--elev-1); background: color-mix(in srgb, var(--card) 88%, transparent); }
 .nav-link { position: relative; font-weight: 500; transition: color 0.2s var(--ease); }
+/* Kill the global a:hover text underline on nav links — the gradient ::after
+   below is the only underline we want (otherwise it reads as a double line). */
+.nav-link:hover, .nav-link:focus { text-decoration: none; }
 .nav-link.active::after,
 .nav-link:hover::after {
   content: ""; position: absolute; left: 0.75rem; right: 0.75rem; bottom: -2px; height: 2px;
