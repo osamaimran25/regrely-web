@@ -51,13 +51,25 @@ h2 { letter-spacing: -0.022em; line-height: 1.12; }
 /* Kill the global a:hover text underline on nav links — the gradient ::after
    below is the only underline we want (otherwise it reads as a double line). */
 .nav-link:hover, .nav-link:focus { text-decoration: none; }
+/* Keep the accent underline shown while the dropdown is open too, so it does
+   not flicker on/off as the pointer moves from the toggle down into the menu. */
 .nav-link.active::after,
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.dropdown-toggle[aria-expanded="true"]::after {
   content: ""; position: absolute; left: 0.75rem; right: 0.75rem; bottom: -2px; height: 2px;
   border-radius: 2px; background: var(--grad-brand);
 }
-.dropdown-menu { border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--elev-2); padding: 0.4rem; overflow: hidden; }
-.dropdown-item { border-radius: 9px; transition: background 0.15s var(--ease); }
+/* Stable dropdown: no overflow-clip repaint, a solid hover bridge (margin-top:0
+   removes the toggle→menu gap that made it flicker), snappy non-jittery items. */
+.dropdown-menu {
+  border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--elev-2);
+  padding: 0.4rem; margin-top: 0.35rem; min-width: 12rem;
+}
+.dropdown-item {
+  border-radius: 9px; padding: 0.5rem 0.75rem;
+  transition: background-color 0.12s linear, color 0.12s linear;
+}
+.dropdown-item:hover, .dropdown-item:focus { text-decoration: none; }
 
 /* ---- Buttons: refined depth + spring hover ---- */
 .btn { border-radius: 12px; font-weight: 600; transition: transform 0.18s var(--ease), box-shadow 0.25s var(--ease), background 0.2s var(--ease); }
