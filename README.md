@@ -1,14 +1,13 @@
-# RegRely Web (Next.js 14)
+# RegRely Web
 
-Marketing site for RegRely built with Next.js 14 App Router, Tailwind CSS, and shadcn-style UI components.
+Marketing site for [RegRely](https://regrely.com/), GDPR compliance software
+for growing businesses.
 
 ## Stack
 
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- Radix UI primitives (Tabs, Accordion)
-- lucide-react icons
+- Astro
+- Bootstrap
+- Custom CSS and JavaScript
 
 ## Routes
 
@@ -24,21 +23,21 @@ Marketing site for RegRely built with Next.js 14 App Router, Tailwind CSS, and s
    ```bash
    npm install
    ```
-2. Run dev server:
+2. Run the development server:
    ```bash
    npm run dev
    ```
-3. Open `http://localhost:3000`.
+3. Open the local URL printed by Astro.
 
 ## Build
 
 ```bash
 npm run build
-npm run start
+npm run preview
 ```
 
 ## Notes
 
-- Navbar links to section IDs on `/` (`#features`, `#domains`, `#security`, `#reports`, `#early`).
-- Early Access modal is client-side only (no backend submission).
-- Contact form validates required fields and opens a mailto draft.
+- Production output is generated in `dist/`.
+- Canonical site URLs use trailing slashes.
+- Legacy `.html` paths are retained as redirect pages.

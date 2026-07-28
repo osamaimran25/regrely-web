@@ -76,8 +76,9 @@ export const FOOTER = {
       title: "Resources",
       links: [
         { label: "Pricing", href: "/pricing/" },
+        { label: "GDPR for Small Business", href: "/solutions/gdpr-compliance-software-small-business/" },
         { label: "Case Studies", href: "/case-studies/" },
-        { label: "AI Demo", href: "/ai-demo/" },
+        { label: "Compliance Guides", href: "/blog/" },
       ],
     },
     {

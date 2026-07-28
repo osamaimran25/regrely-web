@@ -1,6 +1,20 @@
 import { SITE, PRODUCTS, INDUSTRIES, REGULATIONS } from "../data/site.js";
 
-const STATIC = ["/", "/product/", "/industries/", "/pricing/", "/security/", "/case-studies/", "/blog/", "/about/", "/contact/", "/ai-demo/", "/privacy/", "/terms/"];
+const STATIC = [
+  "/",
+  "/product/",
+  "/industries/",
+  "/solutions/gdpr-compliance-software-small-business/",
+  "/pricing/",
+  "/security/",
+  "/case-studies/",
+  "/blog/",
+  "/about/",
+  "/contact/",
+  "/ai-demo/",
+  "/privacy/",
+  "/terms/",
+];
 const BLOG = [
   "do-we-need-a-dpo",
   "gdpr-compliance-checklist-for-saas",

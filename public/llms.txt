@@ -15,31 +15,31 @@ GDPR is supported today. Support for CCPA, HIPAA, and the UAE PDPL is in develop
 underlying workflows — records of processing, data subject requests, consent, risk, and
 evidence — are common across all four.
 
-- [GDPR](https://regrely.com/regulation-gdpr.html): Supported today. Lawful basis, Article 30 records, data subject rights within one month, 72-hour breach notification, DPIAs.
-- [CCPA / CPRA](https://regrely.com/regulation-ccpa.html): In development. California disclosure duties, 45-day consumer requests, and the right to opt out of sale or sharing.
-- [HIPAA](https://regrely.com/regulation-hipaa.html): In development. Business associate agreements, the Privacy and Security Rules, and 60-day breach notification.
-- [UAE PDPL](https://regrely.com/regulation-pdpl.html): In development. Federal UAE data protection — lawful bases, data subject rights, and cross-border transfers.
+- [GDPR](https://regrely.com/regulations/gdpr/): Supported today. Lawful basis, Article 30 records, data subject rights within one month, 72-hour breach notification, DPIAs.
+- [CCPA / CPRA](https://regrely.com/regulations/ccpa/): In development. California disclosure duties, 45-day consumer requests, and the right to opt out of sale or sharing.
+- [HIPAA](https://regrely.com/regulations/hipaa/): In development. Business associate agreements, the Privacy and Security Rules, and 60-day breach notification.
+- [UAE PDPL](https://regrely.com/regulations/pdpl/): In development. Federal UAE data protection — lawful bases, data subject rights, and cross-border transfers.
 
 ## Modules
 
-- [DSAR Automation](https://regrely.com/product-dsar.html): Data subject request intake, identity verification, fulfilment workflows, approvals, and evidence-ready responses within statutory deadlines.
-- [ROPA Mapping](https://regrely.com/product-ropa.html): A live record of processing activities with purpose, legal basis, recipients, retention, and control mapping.
-- [Consent Tracking](https://regrely.com/product-consent.html): Consent status, policy versions, and revocation workflows across regions and products.
-- [Compliance Scan](https://regrely.com/product-compliance-scan.html): Control scanning, findings management, and remediation tracking with evidence traceability.
-- [Risk Register](https://regrely.com/product-risk-register.html): Risk scoring, mitigation ownership, and residual risk acceptance.
-- [Reports](https://regrely.com/product-reports.html): Executive dashboards and audit-ready exports.
+- [DSAR Automation](https://regrely.com/product/dsar/): Data subject request intake, identity verification, fulfilment workflows, approvals, and evidence-ready responses within statutory deadlines.
+- [ROPA Mapping](https://regrely.com/product/ropa/): A live record of processing activities with purpose, legal basis, recipients, retention, and control mapping.
+- [Consent Tracking](https://regrely.com/product/consent/): Consent status, policy versions, and revocation workflows across regions and products.
+- [Compliance Scan](https://regrely.com/product/compliance-scan/): Control scanning, findings management, and remediation tracking with evidence traceability.
+- [Risk Register](https://regrely.com/product/risk-register/): Risk scoring, mitigation ownership, and residual risk acceptance.
+- [Reports](https://regrely.com/product/reports/): Executive dashboards and audit-ready exports.
 
 ## Industries
 
 RegRely publishes privacy-operations guidance for
-[SaaS](https://regrely.com/industry-saas.html),
-[healthtech](https://regrely.com/industry-healthtech.html),
-[fintech](https://regrely.com/industry-fintech.html),
-[ecommerce](https://regrely.com/industry-ecommerce.html),
-[insurtech](https://regrely.com/industry-insurtech.html),
-[edtech](https://regrely.com/industry-edtech.html),
-[logistics](https://regrely.com/industry-logistics.html), and
-[HR](https://regrely.com/industry-hr.html).
+[SaaS](https://regrely.com/industries/saas/),
+[healthtech](https://regrely.com/industries/healthtech/),
+[fintech](https://regrely.com/industries/fintech/),
+[ecommerce](https://regrely.com/industries/ecommerce/),
+[insurtech](https://regrely.com/industries/insurtech/),
+[edtech](https://regrely.com/industries/edtech/),
+[logistics](https://regrely.com/industries/logistics/), and
+[HR](https://regrely.com/industries/hr/).
 
 ## Who RegRely is for
 
@@ -47,17 +47,21 @@ Startups and growing companies — typically without a dedicated privacy team �
 customer personal data and face GDPR obligations, enterprise security reviews, or an
 upcoming audit.
 
+Read the [small-business GDPR software guide](https://regrely.com/solutions/gdpr-compliance-software-small-business/)
+for a practical overview of data mapping, DSAR, risk, consent, remediation, and
+evidence requirements.
+
 ## Pricing
 
 Starter $99/month, Growth $299/month, Professional $799/month, Enterprise custom.
-See [pricing](https://regrely.com/pricing.html).
+See [pricing](https://regrely.com/pricing/).
 
 ## Security
 
 Tenant isolation, role-based access control, encryption in transit and at rest, and
-immutable audit logging. See [security](https://regrely.com/security.html).
+immutable audit logging. See [security](https://regrely.com/security/).
 
 ## Contact
 
-- [Contact RegRely](https://regrely.com/contact.html) — info@regrely.com
-- [Start a free trial](https://app.regrely.com/)
+- [Contact RegRely](https://regrely.com/contact/) — info@regrely.com
+- [Start a free trial](https://app.regrely.com/auth/tenant-signup)

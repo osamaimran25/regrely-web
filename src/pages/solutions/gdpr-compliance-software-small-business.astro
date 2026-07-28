@@ -1,0 +1,251 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { breadcrumbSchema, faqSchema } from "../../lib/schema.js";
+
+const title = "GDPR Compliance Software for Small Business | RegRely";
+const description =
+  "Affordable GDPR compliance software for small businesses. Replace spreadsheets with guided ROPA, DSAR, risk, consent and audit-evidence workflows.";
+const path = "/solutions/gdpr-compliance-software-small-business/";
+const faqs = [
+  {
+    q: "Does GDPR apply to small businesses?",
+    a: "Yes. GDPR does not provide a general small-business exemption. Some record-keeping duties have limited exceptions, but those exceptions disappear when processing is regular, risky, or includes special-category data. Most small businesses that routinely handle customer, prospect, or employee data still have meaningful obligations.",
+  },
+  {
+    q: "What GDPR records should a small business maintain?",
+    a: "The core records normally include a data inventory or ROPA, lawful bases, retention rules, privacy notices, processor agreements, a subprocessor list, data-rights request records, breach decisions, risk assessments, and evidence that security and privacy controls are operating.",
+  },
+  {
+    q: "Can GDPR compliance software replace a lawyer or DPO?",
+    a: "No. Software can organize work, flag gaps, preserve evidence, and make recurring tasks repeatable. It cannot make every legal judgment or act as your DPO. A good platform helps a small team know when specialist advice is actually needed.",
+  },
+  {
+    q: "How much does GDPR compliance software cost?",
+    a: "Pricing varies widely. Enterprise privacy platforms can require large annual contracts and implementation projects. RegRely is designed for growing businesses, with transparent plans starting at $99 per month and a 14-day trial.",
+  },
+];
+const schema = [
+  breadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: "GDPR Compliance Software for Small Business", path },
+  ]),
+  faqSchema(faqs),
+  {
+    "@type": "SoftwareApplication",
+    name: "RegRely GDPR Compliance Software for Small Business",
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "GDPR Compliance Software",
+    operatingSystem: "Web",
+    url: `https://regrely.com${path}`,
+    description,
+    offers: {
+      "@type": "Offer",
+      price: "99",
+      priceCurrency: "USD",
+      url: "https://regrely.com/pricing/",
+    },
+  },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema}>
+  <section class="page-hero">
+    <div class="container">
+      <nav aria-label="Breadcrumb" class="small mb-3">
+        <a href="/">Home</a> <span class="text-muted">/</span>
+        <span class="text-muted">Small-business GDPR software</span>
+      </nav>
+      <span class="badge badge-soft rounded-pill mb-3">Built for lean teams</span>
+      <h1>GDPR compliance software for small businesses</h1>
+      <p>
+        Replace disconnected spreadsheets, policy folders, and deadline reminders with one guided system for
+        data mapping, privacy requests, risks, consent, and audit evidence.
+      </p>
+      <div class="d-flex flex-wrap gap-2 mt-4">
+        <a class="btn btn-brand btn-lg" href="https://app.regrely.com/auth/tenant-signup" target="_blank" rel="noopener noreferrer">
+          Start Free 14-Day Trial
+        </a>
+        <a class="btn btn-ghost btn-lg" href="/pricing/">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <h2>Small-business GDPR compliance is an operating process</h2>
+          <p>
+            A privacy policy alone does not make a company GDPR compliant. You need to know what personal data you
+            hold, why you use it, where it goes, how long you keep it, and how you respond when a person exercises
+            their rights. You also need evidence that those decisions are followed in practice.
+          </p>
+          <p>
+            That is difficult when the work lives in a shared drive, a spreadsheet owned by one person, and email
+            threads nobody can find during an audit. RegRely turns those obligations into assigned, repeatable
+            workflows a founder, operations lead, security owner, or small compliance team can actually run.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="card-surface feature-card h-100">
+            <h2 class="h5">The essential GDPR system</h2>
+            <ul class="mb-0">
+              <li>Live data inventory and ROPA</li>
+              <li>DSAR deadlines and response evidence</li>
+              <li>Risk, DPIA, and remediation ownership</li>
+              <li>Consent and lawful-basis records</li>
+              <li>Audit-ready reports and change history</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="container">
+      <h2 class="mb-3">What GDPR compliance software should help you do</h2>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="card-surface feature-card h-100">
+            <h3 class="h5">Map personal data</h3>
+            <p class="text-muted mb-0">
+              Create a <a href="/product/ropa/">record of processing activities</a> that connects data categories,
+              purposes, lawful bases, systems, recipients, transfers, retention, and accountable owners.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-surface feature-card h-100">
+            <h3 class="h5">Handle data requests</h3>
+            <p class="text-muted mb-0">
+              Use <a href="/product/dsar/">DSAR software</a> to verify requesters, calculate deadlines, coordinate
+              searches, record exemptions, approve disclosures, and prove when the response was sent.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-surface feature-card h-100">
+            <h3 class="h5">Find and close gaps</h3>
+            <p class="text-muted mb-0">
+              Run a structured <a href="/product/compliance-scan/">GDPR gap assessment</a>, assign every finding,
+              connect remediation evidence, and keep overdue work visible.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-surface feature-card h-100">
+            <h3 class="h5">Manage privacy risk</h3>
+            <p class="text-muted mb-0">
+              Score inherent and residual risk, document controls, set review dates, and record who accepted what
+              remains in a central <a href="/product/risk-register/">compliance risk register</a>.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-surface feature-card h-100">
+            <h3 class="h5">Track consent decisions</h3>
+            <p class="text-muted mb-0">
+              Keep the purpose, notice version, capture method, timestamp, and withdrawal history needed to show
+              that consent was informed, specific, and easy to revoke.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-surface feature-card h-100">
+            <h3 class="h5">Produce evidence quickly</h3>
+            <p class="text-muted mb-0">
+              Generate management summaries and audit packs without rebuilding the story from inboxes whenever a
+              customer, investor, auditor, or regulator asks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2>Why spreadsheets stop working</h2>
+          <p>
+            A spreadsheet can capture a point-in-time inventory, but it cannot reliably run the process around it.
+            It does not remind an owner to review a processing activity, preserve approval history, connect a risk
+            to its control evidence, or show whether a data request is about to miss its legal deadline.
+          </p>
+          <p>
+            The problem gets worse as new SaaS vendors, employees, markets, and customer requirements appear. The
+            record drifts away from reality, and the team discovers the gap during a procurement review or incident.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <h2>What to look for before you buy</h2>
+          <ul>
+            <li><strong>Coverage:</strong> operational workflows, not only policy templates.</li>
+            <li><strong>Evidence:</strong> ownership, timestamps, approvals, and change history.</li>
+            <li><strong>Usability:</strong> clear language a non-specialist can follow.</li>
+            <li><strong>Proportionality:</strong> features and pricing that fit your actual risk.</li>
+            <li><strong>Portability:</strong> useful reports you can provide outside the platform.</li>
+            <li><strong>Security:</strong> tenant isolation, access controls, encryption, and audit logs.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="container">
+      <h2>A practical route from scattered records to audit readiness</h2>
+      <div class="row g-3">
+        <div class="col-md-3"><div class="card-surface feature-card h-100"><p class="small text-muted">Step 1</p><h3 class="h5">Scope</h3><p class="mb-0">Identify entities, roles, regulations, systems, and accountable owners.</p></div></div>
+        <div class="col-md-3"><div class="card-surface feature-card h-100"><p class="small text-muted">Step 2</p><h3 class="h5">Map</h3><p class="mb-0">Document processing, vendors, transfers, retention, and lawful bases.</p></div></div>
+        <div class="col-md-3"><div class="card-surface feature-card h-100"><p class="small text-muted">Step 3</p><h3 class="h5">Remediate</h3><p class="mb-0">Prioritize gaps, assign work, attach evidence, and approve residual risk.</p></div></div>
+        <div class="col-md-3"><div class="card-surface feature-card h-100"><p class="small text-muted">Step 4</p><h3 class="h5">Operate</h3><p class="mb-0">Run requests, reviews, incidents, and reporting as repeatable workflows.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="container">
+      <h2 class="mb-3">Frequently asked questions</h2>
+      <div class="accordion" id="smallBusinessGdprFaq">
+        {faqs.map((faq, index) => (
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class:list={["accordion-button", index !== 0 && "collapsed"]}
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={`#smallBusinessGdprFaq${index}`}
+                aria-expanded={index === 0 ? "true" : "false"}
+              >
+                {faq.q}
+              </button>
+            </h3>
+            <div
+              id={`smallBusinessGdprFaq${index}`}
+              class:list={["accordion-collapse", "collapse", index === 0 && "show"]}
+              data-bs-parent="#smallBusinessGdprFaq"
+            >
+              <div class="accordion-body">{faq.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-sm">
+    <div class="container">
+      <div class="card-surface final-cta">
+        <h2>Build a GDPR process your team can keep current</h2>
+        <p class="text-muted">Start with guided workflows and upgrade from spreadsheets without an enterprise implementation project.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a class="btn btn-brand" href="https://app.regrely.com/auth/tenant-signup" target="_blank" rel="noopener noreferrer">Start Free Trial</a>
+          <a class="btn btn-ghost" href="/contact/">Talk to RegRely</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
